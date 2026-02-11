@@ -2,8 +2,9 @@ name: Release
 
 on:
   push:
-    tags:
-      - "rules-v*"
+    branches: [main]
+    paths:
+      - "package.json"
 
 jobs:
   release:
@@ -14,31 +15,61 @@ jobs:
       id-token: write
     steps:
       - uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: Check if version changed
+        id: version
+        run: |
+          NEW=$(node -p "require('./package.json').version")
+          OLD=$(git show HEAD~1:package.json | node -p "JSON.parse(require('fs').readFileSync('/dev/stdin','utf8')).version")
+          echo "new=$NEW" >> "$GITHUB_OUTPUT"
+          if [ "$NEW" != "$OLD" ]; then
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+          fi
+
       - uses: actions/setup-node@v4
+        if: steps.version.outputs.changed == 'true'
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org
-      - run: npm run ci
 
-      - uses: softprops/action-gh-release@v2
+      - name: Build and validate
+        if: steps.version.outputs.changed == 'true'
+        run: npm run ci
+
+      - name: Create git tag
+        if: steps.version.outputs.changed == 'true'
+        run: |
+          git tag "rules-v${{ steps.version.outputs.new }}"
+          git push origin "rules-v${{ steps.version.outputs.new }}"
+
+      - name: GitHub Release
+        if: steps.version.outputs.changed == 'true'
+        uses: softprops/action-gh-release@v2
         with:
+          tag_name: "rules-v${{ steps.version.outputs.new }}"
           files: |
             dist/index.json
             dist/rules.min.json
           generate_release_notes: true
 
-      # Publish to npm with provenance attestation
       - name: Publish to npm
+        if: steps.version.outputs.changed == 'true'
         run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
-      # Publish to GitHub Packages (mirror)
       - uses: actions/setup-node@v4
+        if: steps.version.outputs.changed == 'true'
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com
+
       - name: Publish to GitHub Packages
+        if: steps.version.outputs.changed == 'true'
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
