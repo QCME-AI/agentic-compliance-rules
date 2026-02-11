@@ -3,9 +3,10 @@
   "version": "0.1.0",
   "description": "Canonical, versioned, machine-readable compliance rules for high-throughput marketing content validation",
   "type": "module",
-  "main": "./dist/index.json",
+  "main": "./dist/index.js",
   "exports": {
-    ".": "./dist/index.json",
+    ".": "./dist/index.js",
+    "./index.json": "./dist/index.json",
     "./schemas/*": "./schemas/*",
     "./rules/*": "./rules/*"
   },
@@ -21,7 +22,14 @@
     "build": "node tools/build-index.mjs",
     "check:licensing": "node tools/check-licensing.mjs",
     "migrate": "node tools/migrate-from-backend.mjs",
-    "ci": "npm run validate && npm run validate:fixtures && npm run check:licensing && npm run build"
+    "ci": "npm run validate && npm run validate:fixtures && npm run check:licensing && npm run build",
+    "prepublishOnly": "npm run ci"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "publishConfig": {
+    "access": "public"
   },
   "license": "Apache-2.0",
   "repository": {

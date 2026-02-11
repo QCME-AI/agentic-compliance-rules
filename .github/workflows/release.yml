@@ -10,18 +10,21 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    defaults:
-      run:
-        working-directory: packages/agentic-compliance-rules
+      id-token: write
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+          registry-url: https://registry.npmjs.org
       - run: npm run ci
       - uses: softprops/action-gh-release@v2
         with:
           files: |
-            packages/agentic-compliance-rules/dist/index.json
-            packages/agentic-compliance-rules/dist/rules.min.json
+            dist/index.json
+            dist/rules.min.json
           generate_release_notes: true
+      - name: Publish to npm
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}

@@ -1,31 +1,16 @@
 # QCME Agentic Compliance Rules
 
-Canonical, versioned, machine-readable compliance rules for high-throughput marketing content validation.
+Canonical, versioned, machine-readable compliance rules for AI-powered marketing content validation.
 
-## Quick Start
+## Why This Package?
 
-Validate a content snippet against the rules using the Claude skill:
+LLMs already know a lot about regulations — so why package rules as structured data?
 
-```
-/validate-copy "Our product guarantees 50% weight loss in 2 weeks"
-```
-
-Or use the rules programmatically:
-
-```bash
-# Clone the repo
-git clone https://github.com/QCME-AI/agentic-compliance-rules.git
-cd agentic-compliance-rules
-
-# Validate all rules
-npm run validate
-
-# Build the dist index
-npm run build
-
-# Use dist/index.json in your pipeline
-cat dist/index.json | jq '.rules | length'
-```
+- **Completeness** — An LLM may recall major FTC rules but miss COPPA 312.4(d)(3). This package guarantees all 208 rules are evaluated, every time.
+- **Traceability** — Every finding cites a specific regulation (e.g., "16 CFR 255.5") with a direct URL to the source text. Not "I think the FTC requires this."
+- **Versioning** — Pin to `rules@0.1.0` for audit purposes. Know exactly which rules were applied and when.
+- **Consistency** — Same rule set applied every run. No drift from model updates, temperature, or prompt variation.
+- **Open source** — Rules are transparent and community-maintained. You can read, fork, and extend them.
 
 ## Rule Packs
 
@@ -39,6 +24,60 @@ cat dist/index.json | jq '.rules | length'
 | CCPA | 12 | US-CA | `allowed` |
 | COPPA | 12 | US | `allowed` |
 | CAN-SPAM | 14 | US | `allowed` |
+
+## Quick Start
+
+### Claude Code Skills
+
+The fastest way to use these rules:
+
+```
+/validate-copy "Our product guarantees 50% weight loss in 2 weeks"
+```
+
+Other available skills:
+
+| Skill | Purpose |
+|-------|---------|
+| `/validate-copy` | General compliance review of marketing content |
+| `/check-email` | Email-specific compliance (CAN-SPAM, opt-out, sender ID) |
+| `/check-privacy-policy` | Check privacy policy for required disclosures |
+| `/explain-rule` | Look up and explain a specific rule |
+| `/list-rules` | Browse and filter available rules |
+| `/draft-disclosures` | Generate draft compliance language for flagged issues |
+
+To install skills:
+
+```bash
+cp -r skills/ .claude/skills/
+```
+
+### Programmatic Use
+
+```bash
+npm install @qcme/agentic-compliance-rules
+```
+
+```javascript
+// ESM
+import rules from '@qcme/agentic-compliance-rules';
+console.log(rules.rules.length); // 208
+
+// Named exports
+import { packs, allRules, version } from '@qcme/agentic-compliance-rules';
+
+// Direct JSON access
+import index from '@qcme/agentic-compliance-rules/index.json' with { type: 'json' };
+```
+
+### From Source
+
+```bash
+git clone https://github.com/QCME-AI/agentic-compliance-rules.git
+cd agentic-compliance-rules
+npm run build
+cat dist/index.json | jq '.rules | length'  # 208
+```
 
 ## Rule Schema
 
@@ -80,52 +119,7 @@ Each rule follows the schema defined in `schemas/rule.schema.json`:
 
 ## Agent Integration
 
-These rules are designed as structured knowledge for AI agents — not as a regex engine. The rules provide regulatory context (what the regulation requires, why it matters, how to fix violations) that agents use to reason about compliance.
-
-### Claude Code Skill
-
-```bash
-# Copy the skill into your project
-cp -r skills/validate-copy/ .claude/skills/validate-copy/
-
-# Then use it
-/validate-copy "Our supplement guarantees 50% weight loss in just 2 weeks!"
-```
-
-The skill loads relevant rules as context and uses AI reasoning to evaluate content against them. See `skills/validate-copy/README.md` for details.
-
-### MCP Server (planned)
-
-```json
-{ "qcme-rules": { "command": "npx", "args": ["@qcme/rules-mcp-adapter"] } }
-```
-
-### Direct Import
-
-```javascript
-import rules from '@qcme/agentic-compliance-rules';
-// rules.packs — array of pack definitions
-// rules.rules — array of all 208 rule objects
-// Pass relevant rules as context to your LLM of choice
-```
-
-## CI/CD Integration
-
-```yaml
-# .github/workflows/compliance.yml
-name: Compliance Check
-on: [pull_request]
-jobs:
-  check:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-node@v4
-        with:
-          node-version: 20
-      - run: npm install @qcme/agentic-compliance-rules
-      - run: npx qcme-validate  # Validate rule integrity
-```
+These rules are designed as structured knowledge for AI agents — not as a regex engine. The `detection.patterns` and `detection.keywords` fields are signals that help an AI understand what language each rule is about. The AI reasons about compliance using the full rule definition (summary, remediation guidance, source citation) as context.
 
 ## Contributing
 
