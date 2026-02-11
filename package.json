@@ -1,6 +1,6 @@
 {
   "name": "@qcme/agentic-compliance-rules",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Canonical, versioned, machine-readable compliance rules for high-throughput marketing content validation",
   "type": "module",
   "main": "./dist/index.js",
@@ -43,8 +43,19 @@
     "hipaa",
     "ftc",
     "gdpr",
+    "ccpa",
+    "coppa",
+    "can-spam",
+    "sec",
     "marketing",
     "llm",
-    "ai-compliance"
-  ]
+    "ai-compliance",
+    "claude-code",
+    "mcp",
+    "rules-engine"
+  ],
+  "homepage": "https://github.com/QCME-AI/agentic-compliance-rules#readme",
+  "bugs": {
+    "url": "https://github.com/QCME-AI/agentic-compliance-rules/issues"
+  }
 }
