@@ -62,7 +62,15 @@ function main() {
     JSON.stringify(index) + "\n"
   );
 
-  console.log(`\nWrote dist/index.json and dist/rules.min.json`);
+  // ESM wrapper so `import rules from '@qcme/agentic-compliance-rules'` works without import attributes
+  const wrapper = `import rules from './index.json' with { type: 'json' };
+export default rules;
+export const { packs, version } = rules;
+export const allRules = rules.rules;
+`;
+  writeFileSync(join(distDir, "index.js"), wrapper);
+
+  console.log(`\nWrote dist/index.json, dist/rules.min.json, and dist/index.js`);
 }
 
 main();

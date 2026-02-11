@@ -4,17 +4,20 @@ on:
   push:
     branches: [main]
     paths:
-      - "packages/agentic-compliance-rules/**"
+      - "rules/**"
+      - "schemas/**"
+      - "tools/**"
+      - "package.json"
   pull_request:
     paths:
-      - "packages/agentic-compliance-rules/**"
+      - "rules/**"
+      - "schemas/**"
+      - "tools/**"
+      - "package.json"
 
 jobs:
   validate:
     runs-on: ubuntu-latest
-    defaults:
-      run:
-        working-directory: packages/agentic-compliance-rules
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
@@ -28,3 +31,4 @@ jobs:
         run: |
           test -f dist/index.json || (echo "dist/index.json missing" && exit 1)
           test -f dist/rules.min.json || (echo "dist/rules.min.json missing" && exit 1)
+          test -f dist/index.js || (echo "dist/index.js missing" && exit 1)
