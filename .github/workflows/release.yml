@@ -42,12 +42,14 @@ jobs:
 
       - name: Create git tag
         if: steps.version.outputs.changed == 'true'
+        continue-on-error: true
         run: |
           git tag "rules-v${{ steps.version.outputs.new }}"
           git push origin "rules-v${{ steps.version.outputs.new }}"
 
       - name: GitHub Release
         if: steps.version.outputs.changed == 'true'
+        continue-on-error: true
         uses: softprops/action-gh-release@v2
         with:
           tag_name: "rules-v${{ steps.version.outputs.new }}"
@@ -58,6 +60,7 @@ jobs:
 
       - name: Publish to npm
         if: steps.version.outputs.changed == 'true'
+        continue-on-error: true
         run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
