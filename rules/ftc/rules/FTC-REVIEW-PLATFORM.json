@@ -1,0 +1,47 @@
+{
+  "id": "FTC-REVIEW-PLATFORM",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Fake Review Counts or Star Ratings",
+  "severity": "critical",
+  "summary": "Displaying fake or inflated review counts, star ratings, or aggregate scores is deceptive advertising.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "\\d+[,\\d]*\\s*reviews?.*\\d+(\\.\\d)?\\s*stars?",
+      "rated\\s+\\d+(\\.\\d)?\\s*out\\s+of\\s*5"
+    ],
+    "keywords": [
+      "star rating",
+      "customer reviews",
+      "average rating",
+      "review count"
+    ]
+  },
+  "remediation": {
+    "guidance": "Ensure all displayed ratings and review counts accurately reflect actual verified customer reviews.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "FTC-255-5-disclosure-clear",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Disclosure Must Be Clear and Conspicuous",
+  "severity": "warning",
+  "summary": "Disclosures must be clear, conspicuous, and placed where consumers will notice them before engaging with the endorsement.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": ["fine print", "small print", "terms and conditions apply", "see details", "restrictions apply", "subject to terms"]
+  },
+  "remediation": {
+    "guidance": "Place disclosures at the beginning of content. Use clear language like \"Ad\" or \"Sponsored\". Avoid burying in hashtags.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 255.5",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255#255.5",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "endorsement",
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

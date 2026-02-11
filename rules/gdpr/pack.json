@@ -1,0 +1,33 @@
+{
+  "pack_id": "gdpr",
+  "pack_version": "0.1.0",
+  "framework": "gdpr",
+  "description": "GDPR rules covering consent, privacy policies, data subject rights, and international transfers",
+  "rule_ids": [
+    "GDPR-Art5-lawful",
+    "GDPR-Art5-purpose",
+    "GDPR-Art6-legal-basis",
+    "GDPR-Art7-consent-conditions",
+    "GDPR-Art7-withdraw",
+    "GDPR-Art7-cookie-consent",
+    "GDPR-Art12-transparent",
+    "GDPR-Art12-response-time",
+    "GDPR-Art13-identity",
+    "GDPR-Art13-purposes",
+    "GDPR-Art13-retention",
+    "GDPR-Art15-access",
+    "GDPR-Art17-erasure",
+    "GDPR-Art20-portability",
+    "GDPR-Art21-object",
+    "GDPR-Art21-marketing",
+    "GDPR-transfer",
+    "GDPR-Art22-automated-decisions",
+    "GDPR-Art9-special-categories",
+    "GDPR-Art8-children-consent",
+    "GDPR-Art13-recipients",
+    "GDPR-Art13-complaint-right",
+    "GDPR-Art13-legitimate-interest",
+    "GDPR-Art7-unbundled-consent",
+    "GDPR-Art14-indirect-collection"
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "id": "SEC-482-g-current",
+  "version": "1.0.0",
+  "framework": "sec-482",
+  "title": "Current Performance Availability",
+  "severity": "warning",
+  "summary": "Investment company advertisements must provide a phone number or website URL where investors can obtain current month-end performance data.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": ["call.*\\d{3}[\\s.-]?\\d{3}[\\s.-]?\\d{4}", "visit.*\\.(com|org|net)", "current\\s+performance"],
+    "keywords": ["call", "visit", "current performance", "month-end"]
+  },
+  "remediation": {
+    "guidance": "Include phone number or website URL where current month-end performance can be obtained.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 230.482(g)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.482",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

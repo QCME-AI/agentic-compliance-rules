@@ -1,0 +1,48 @@
+{
+  "id": "FTC-CANCEL-HARD",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Difficult Cancellation Process",
+  "severity": "warning",
+  "summary": "Cancellation must be as easy as sign-up. Complex cancellation processes (call-only, multiple steps, retention offers) violate FTC guidelines.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "call\\s+to\\s+cancel",
+      "contact.*to\\s+cancel",
+      "cancellation\\s+(fee|charge|penalty)"
+    ],
+    "keywords": [
+      "cancel subscription",
+      "how to cancel",
+      "cancellation policy",
+      "stop subscription"
+    ]
+  },
+  "remediation": {
+    "guidance": "Provide simple online cancellation option. Do not require phone calls or multiple retention attempts.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5 / Click-to-Cancel",
+    "source_url": "https://www.ftc.gov/business-guidance/news-events/news/press-releases/2023/03/ftc-proposes-rule-provision-making-it-easy-consumers-click-cancel",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

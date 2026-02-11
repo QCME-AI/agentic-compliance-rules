@@ -1,0 +1,48 @@
+{
+  "id": "FTC-255-5-free-product",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Free Product Disclosure",
+  "severity": "critical",
+  "summary": "If an endorser received a free product to review, this must be clearly disclosed.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(free|gifted|complimentary)\\s+product",
+      "received\\s+(free|for\\s+review)",
+      "pr\\s+sample"
+    ],
+    "keywords": [
+      "free product",
+      "gifted",
+      "PR sample",
+      "received for review"
+    ]
+  },
+  "remediation": {
+    "guidance": "Include clear disclosure when products were provided for free. Example: \"Product provided for review.\"",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 255.5",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255#255.5",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

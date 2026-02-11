@@ -1,0 +1,41 @@
+{
+  "id": "CCPA-120-opt-out",
+  "version": "1.0.0",
+  "framework": "ccpa",
+  "title": "Right to Opt-Out of Sale",
+  "severity": "critical",
+  "summary": "Consumers have the right to opt-out of the sale or sharing of their personal information.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "sell.*personal\\s+information",
+      "share.*personal\\s+information",
+      "opt[\\s-]?out.*sale"
+    ],
+    "keywords": [
+      "opt-out",
+      "sale of personal information",
+      "do not sell",
+      "do not share"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement opt-out mechanism and honor requests immediately.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "Cal. Civ. Code § 1798.120(a)",
+    "source_url": "https://oag.ca.gov/privacy/ccpa",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["consent", "data-sale"],
+    "jurisdiction": ["US-CA"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

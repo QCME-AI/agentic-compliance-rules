@@ -1,0 +1,32 @@
+{
+  "id": "SEC-MKT-a-omission",
+  "version": "1.0.0",
+  "framework": "sec-marketing",
+  "title": "No Material Omissions",
+  "severity": "critical",
+  "summary": "Advertisement must not omit any material fact that would make the advertisement misleading",
+  "rationale": "",
+  "detection": {
+    "type": "ai-only",
+    "patterns": [],
+    "keywords": ["omission", "material fact", "misleading"]
+  },
+  "remediation": {
+    "guidance": "Include all material facts necessary for complete understanding of advertised services.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 275.206(4)-1(a)(2)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206-4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

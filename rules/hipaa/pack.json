@@ -1,0 +1,25 @@
+{
+  "pack_id": "hipaa",
+  "pack_version": "0.1.0",
+  "framework": "hipaa",
+  "description": "HIPAA Privacy and Security rules covering PHI protection, consent requirements, and privacy notices",
+  "rule_ids": [
+    "HIPAA-502-minimum",
+    "HIPAA-502-permitted",
+    "HIPAA-502-marketing",
+    "HIPAA-508-required",
+    "HIPAA-508-elements",
+    "HIPAA-520-notice",
+    "HIPAA-520-content",
+    "HIPAA-520-website",
+    "HIPAA-524-access",
+    "HIPAA-524-electronic",
+    "HIPAA-312-encryption",
+    "HIPAA-312-access-control",
+    "HIPAA-312-audit",
+    "HIPAA-530-training",
+    "HIPAA-530-sanctions",
+    "HIPAA-web-forms",
+    "HIPAA-web-tracking"
+  ]
+}

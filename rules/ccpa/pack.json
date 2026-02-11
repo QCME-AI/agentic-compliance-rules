@@ -1,0 +1,20 @@
+{
+  "pack_id": "ccpa",
+  "pack_version": "0.1.0",
+  "framework": "ccpa",
+  "description": "CCPA/CPRA rules covering consumer rights, Do Not Sell requirements, privacy policy obligations, and sensitive personal information",
+  "rule_ids": [
+    "CCPA-100-know",
+    "CCPA-100-disclosure",
+    "CCPA-105-delete",
+    "CCPA-110-categories",
+    "CCPA-120-opt-out",
+    "CCPA-120-minors",
+    "CCPA-125-non-discrimination",
+    "CCPA-130-methods",
+    "CCPA-130-response",
+    "CCPA-135-dns-link",
+    "CCPA-135-privacy-policy",
+    "CCPA-CPRA-sensitive"
+  ]
+}

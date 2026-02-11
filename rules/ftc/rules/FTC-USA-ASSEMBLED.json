@@ -1,0 +1,46 @@
+{
+  "id": "FTC-USA-ASSEMBLED",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "\"Assembled in USA\" Misuse",
+  "severity": "warning",
+  "summary": "\"Assembled in USA\" requires principal assembly in the US. Must not imply higher US content than exists.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "assembled\\s+in\\s+(the\\s+)?u\\.?s\\.?a?\\.?",
+      "assembled\\s+in\\s+(america|united\\s+states)"
+    ],
+    "keywords": [
+      "assembled in USA",
+      "assembled in America",
+      "US assembly"
+    ]
+  },
+  "remediation": {
+    "guidance": "Only use \"Assembled in USA\" if significant assembly occurs in the US. Disclose foreign components.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5 / Made in USA Policy",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/complying-made-usa-standard",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

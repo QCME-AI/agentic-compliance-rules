@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-316-3-transactional",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "Transactional Email Definition",
+  "severity": "info",
+  "summary": "Transactional or relationship messages (order confirmations, account updates, warranty info) are exempt from most CAN-SPAM requirements, but must not be deceptive.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": ["order\\s+confirm", "account\\s+(update|notification|alert)", "shipping\\s+(confirm|notification|update)", "password\\s+reset"],
+    "keywords": ["transactional email", "order confirmation", "account notification", "relationship message"]
+  },
+  "remediation": {
+    "guidance": "Transactional emails are exempt from opt-out and identification requirements, but the primary purpose must genuinely be transactional. Do not disguise commercial messages as transactional.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 316.3",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["classification"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

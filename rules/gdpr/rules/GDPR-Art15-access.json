@@ -1,0 +1,43 @@
+{
+  "id": "GDPR-Art15-access",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Right of Access",
+  "severity": "warning",
+  "summary": "Data subjects have the right to obtain confirmation and access to their personal data.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "access",
+      "obtain",
+      "copy"
+    ]
+  },
+  "remediation": {
+    "guidance": "Inform users of their access rights and provide mechanism to request data.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.15(1)",
+    "source_url": "https://gdpr.eu/article-15-right-of-access/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "data-rights",
+      "structural"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

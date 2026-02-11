@@ -1,0 +1,44 @@
+{
+  "id": "HIPAA-508-elements",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Authorization Form Elements",
+  "severity": "warning",
+  "summary": "Authorization forms must contain specific required elements including description of PHI, purpose, and expiration.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "authorization form",
+      "elements",
+      "expiration",
+      "revoke"
+    ]
+  },
+  "remediation": {
+    "guidance": "Include all required elements: PHI description, purpose, expiration, right to revoke.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.508(c)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "health-data",
+      "structural"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

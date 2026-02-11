@@ -1,0 +1,49 @@
+{
+  "id": "GDPR-Art7-cookie-consent",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Cookie Consent Banner",
+  "severity": "critical",
+  "summary": "Non-essential cookies require explicit consent before being set.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "document\\.cookie",
+      "localStorage",
+      "tracking"
+    ],
+    "keywords": [
+      "cookie",
+      "consent",
+      "banner",
+      "tracking"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement cookie consent banner that blocks non-essential cookies until consent.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.7",
+    "source_url": "https://gdpr.eu/cookies/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "consent",
+      "cookies"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

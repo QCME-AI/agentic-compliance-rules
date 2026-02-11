@@ -1,0 +1,44 @@
+{
+  "id": "GDPR-Art13-recipients",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Recipients Disclosure",
+  "severity": "warning",
+  "summary": "Must disclose the recipients or categories of recipients of personal data at the time of collection.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "share.*with\\s+(third|our)",
+      "disclose.*to\\s+(third|partner)",
+      "third[\\s-]?part(y|ies).*receiv",
+      "data\\s+processor"
+    ],
+    "keywords": [
+      "recipients",
+      "third party sharing",
+      "data processor",
+      "sub-processor",
+      "who we share with",
+      "service providers"
+    ]
+  },
+  "remediation": {
+    "guidance": "Disclose all recipients or categories of recipients who will receive personal data.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.13(1)(e)",
+    "source_url": "https://gdpr.eu/article-13-personal-data-collected/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": ["disclosure"],
+    "jurisdiction": ["EU"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

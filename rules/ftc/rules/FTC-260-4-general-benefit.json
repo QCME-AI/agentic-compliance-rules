@@ -1,0 +1,48 @@
+{
+  "id": "FTC-260-4-general-benefit",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "General Environmental Benefit Claims",
+  "severity": "critical",
+  "summary": "Unqualified general environmental benefit claims (e.g., \"green\" or \"eco-friendly\") are difficult to substantiate and should be avoided.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "\\b(green|eco|sustainable)\\b(?![\\w-])",
+      "good\\s+for\\s+(the\\s+)?environment",
+      "planet[\\s-]?friendly"
+    ],
+    "keywords": [
+      "green",
+      "sustainable",
+      "eco",
+      "planet friendly"
+    ]
+  },
+  "remediation": {
+    "guidance": "Replace vague environmental claims with specific, measurable benefits that can be documented.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 260.4",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-260#260.4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

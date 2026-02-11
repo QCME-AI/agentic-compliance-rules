@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-7704-7-no-opt-out-fee",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "Free Opt-Out",
+  "severity": "critical",
+  "summary": "Cannot charge a fee, require the recipient to provide information beyond email address, or make the recipient take more than a single step to opt out.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": ["(login|sign\\s+in|log\\s+in).*unsubscribe", "(pay|fee|charge).*unsubscribe"],
+    "keywords": ["free to unsubscribe", "no fee to opt out", "single step opt out", "one-click unsubscribe"]
+  },
+  "remediation": {
+    "guidance": "Opt-out must require no more than a single action (e.g., clicking a link or sending a reply). Cannot require login, payment, or additional personal information beyond email address.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "15 USC 7704(a)(3)(B)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["consent", "opt-out"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

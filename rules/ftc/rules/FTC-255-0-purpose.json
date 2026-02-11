@@ -1,0 +1,38 @@
+{
+  "id": "FTC-255-0-purpose",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Endorsement Guide Purpose",
+  "severity": "info",
+  "summary": "The FTC Endorsement Guides address the application of Section 5 of the FTC Act to endorsements and testimonials in advertising.",
+  "rationale": "",
+  "detection": {
+    "type": "ai-only"
+  },
+  "remediation": {
+    "guidance": "Understand that endorsement guidelines apply to all advertising mediums including social media.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 255.0",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255#255.0",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "endorsement",
+      "structural"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

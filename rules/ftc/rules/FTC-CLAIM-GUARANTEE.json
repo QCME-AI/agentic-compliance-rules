@@ -1,0 +1,50 @@
+{
+  "id": "FTC-CLAIM-GUARANTEE",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "\"100% Guaranteed\" Claims",
+  "severity": "warning",
+  "summary": "Absolute guarantee claims must be honored and any conditions must be clearly disclosed.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "100%\\s*(money[\\s-]?back\\s+)?guarantee",
+      "guaranteed\\s+(results?|satisfaction|to\\s+work)",
+      "(full|complete)\\s+refund\\s+guarantee",
+      "no[\\s-]?questions?[\\s-]?asked\\s+refund"
+    ],
+    "keywords": [
+      "money back guarantee",
+      "satisfaction guaranteed",
+      "guaranteed results",
+      "full refund"
+    ]
+  },
+  "remediation": {
+    "guidance": "Clearly disclose all conditions, limitations, and procedures for any guarantee. Honor all guarantees offered.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure",
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,52 @@
+{
+  "id": "FTC-CLAIM-HEALTH",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Unsubstantiated Health Benefit Claims",
+  "severity": "critical",
+  "summary": "Health benefit claims (cures, treats, prevents disease) require competent and reliable scientific evidence.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(cures?|treats?|prevents?|heals?)\\s+(cancer|diabetes|arthritis|disease|illness)",
+      "eliminates?\\s+(pain|symptoms?|disease)",
+      "reverses?\\s+(aging|diabetes|disease)",
+      "boosts?\\s+(immune|immunity)\\s*system"
+    ],
+    "keywords": [
+      "cure",
+      "treat",
+      "prevent disease",
+      "heal",
+      "immune boost",
+      "anti-aging"
+    ]
+  },
+  "remediation": {
+    "guidance": "Remove unsupported health claims. Use qualified language like \"may support\" with appropriate disclaimers.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/health-products-compliance-guidance",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims",
+      "health-data"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

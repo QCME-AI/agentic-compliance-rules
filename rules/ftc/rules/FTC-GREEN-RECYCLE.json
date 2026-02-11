@@ -1,0 +1,36 @@
+{
+  "id": "FTC-GREEN-RECYCLE",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Unqualified Recyclable Claims",
+  "severity": "warning",
+  "summary": "\"Recyclable\" claims must specify what parts are recyclable and whether recycling facilities are available to consumers.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "\\b(100%\\s+)?recyclable\\b",
+      "can\\s+be\\s+recycled",
+      "recycle\\s+this\\s+(product|package|item)"
+    ],
+    "keywords": ["recyclable", "recycle", "recycling", "recyclable packaging"]
+  },
+  "remediation": {
+    "guidance": "Qualify recyclable claims: specify which parts, include recycling instructions, note facility availability.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 260.12",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-260",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["green-claims", "recyclable", "environmental"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

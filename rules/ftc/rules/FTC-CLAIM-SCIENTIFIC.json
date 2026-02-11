@@ -1,0 +1,49 @@
+{
+  "id": "FTC-CLAIM-SCIENTIFIC",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "\"Scientifically Proven\" Without Studies",
+  "severity": "critical",
+  "summary": "Claims invoking scientific authority must be supported by actual scientific studies relevant to the claim.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "scientifically\\s+(proven|tested|formulated|backed)",
+      "science\\s+(shows|proves|confirms)",
+      "(based\\s+on|backed\\s+by)\\s+science",
+      "breakthrough\\s+(formula|technology|discovery)"
+    ],
+    "keywords": [
+      "scientifically proven",
+      "science backed",
+      "breakthrough",
+      "revolutionary"
+    ]
+  },
+  "remediation": {
+    "guidance": "Remove scientific proof claims or cite specific peer-reviewed studies with links to publications.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

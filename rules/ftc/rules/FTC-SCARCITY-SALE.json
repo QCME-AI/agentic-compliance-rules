@@ -1,0 +1,50 @@
+{
+  "id": "FTC-SCARCITY-SALE",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Perpetual Sale / False Deadline",
+  "severity": "warning",
+  "summary": "Running perpetual \"sales\" or claiming \"sale ends today\" when it does not is deceptive pricing.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "sale\\s+ends?\\s+(today|tonight|soon|midnight)",
+      "(last|final)\\s+(day|chance|opportunity)",
+      "ends?\\s+(soon|today|tonight|tomorrow)",
+      "(today|tonight)\\s+only"
+    ],
+    "keywords": [
+      "sale ends",
+      "last chance",
+      "final day",
+      "today only",
+      "limited time"
+    ]
+  },
+  "remediation": {
+    "guidance": "Only advertise sales with genuine end dates. Document regular vs. sale pricing periods.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

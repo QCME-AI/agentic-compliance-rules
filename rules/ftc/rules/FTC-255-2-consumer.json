@@ -1,0 +1,42 @@
+{
+  "id": "FTC-255-2-consumer",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Consumer Endorser Must Be Actual User",
+  "severity": "critical",
+  "summary": "An advertisement using an endorsement by a consumer must use an actual consumer of the product or service.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "real customer",
+      "actual user",
+      "verified purchase"
+    ]
+  },
+  "remediation": {
+    "guidance": "Only use endorsements from people who have actually used the product. Actors portraying consumers must be disclosed.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 255.2(a)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255#255.2",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "endorsement"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

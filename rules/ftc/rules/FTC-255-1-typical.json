@@ -1,0 +1,48 @@
+{
+  "id": "FTC-255-1-typical",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Atypical Results Require Disclosure",
+  "severity": "critical",
+  "summary": "If an endorsement represents results that are not typical, the advertiser must clearly disclose expected results for consumers.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "results\\s+not\\s+typical",
+      "individual\\s+results\\s+(may\\s+)?vary",
+      "your\\s+results\\s+may\\s+differ"
+    ],
+    "keywords": [
+      "results not typical",
+      "results may vary",
+      "individual results"
+    ]
+  },
+  "remediation": {
+    "guidance": "Include clear disclosure of typical results when showing exceptional testimonials. Example: \"Results not typical. Most users see [X].\"",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 255.1(c)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255#255.1",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "endorsement",
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

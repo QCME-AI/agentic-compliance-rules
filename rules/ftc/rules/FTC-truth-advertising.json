@@ -1,0 +1,43 @@
+{
+  "id": "FTC-truth-advertising",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Truth in Advertising",
+  "severity": "critical",
+  "summary": "Advertising must be truthful, not misleading, and backed by evidence.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "truthful",
+      "substantiated",
+      "evidence",
+      "deceptive"
+    ]
+  },
+  "remediation": {
+    "guidance": "Substantiate all advertising claims before making them.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/advertising-marketing/truth-advertising",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "SEC-MKT-f-predecessor",
+  "version": "1.0.0",
+  "framework": "sec-marketing",
+  "title": "Predecessor Performance Requirements",
+  "severity": "warning",
+  "summary": "Must clearly identify predecessor entity and verify substantially similar investment process",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["predecessor", "acquired", "successor"]
+  },
+  "remediation": {
+    "guidance": "Clearly identify predecessor entity and verify substantially similar investment process.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 275.206(4)-1(f)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206-4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["performance", "structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

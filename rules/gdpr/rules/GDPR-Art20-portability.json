@@ -1,0 +1,43 @@
+{
+  "id": "GDPR-Art20-portability",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Right to Data Portability",
+  "severity": "info",
+  "summary": "Data subjects have the right to receive their data in a machine-readable format.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "portability",
+      "export",
+      "download",
+      "machine-readable"
+    ]
+  },
+  "remediation": {
+    "guidance": "Provide data export functionality in common formats (JSON, CSV).",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.20(1)",
+    "source_url": "https://gdpr.eu/article-20-right-to-data-portability/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "data-rights"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "FTC-REVIEW-SUPPRESS",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Review Gating / Selective Review Solicitation",
+  "severity": "warning",
+  "summary": "Soliciting reviews only from satisfied customers or filtering out negative reviews before they are posted is deceptive.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "how\\s+would\\s+you\\s+rate.*before",
+      "satisfied.*leave.*review",
+      "(5|five)\\s*star.*customers"
+    ],
+    "keywords": [
+      "review gate",
+      "happy customers only",
+      "satisfied customers",
+      "selective reviews"
+    ]
+  },
+  "remediation": {
+    "guidance": "Solicit reviews from all customers equally. Do not screen or gate reviews based on expected rating.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/news-events/news/press-releases",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

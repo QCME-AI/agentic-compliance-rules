@@ -1,0 +1,36 @@
+{
+  "id": "COPPA-312-4-direct-notice",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "Direct Notice to Parents",
+  "severity": "critical",
+  "summary": "Must provide direct notice to parents before collecting information from their child, describing what information will be collected and how it will be used.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": [
+      "direct notice to parents",
+      "notify parent",
+      "parental notification"
+    ]
+  },
+  "remediation": {
+    "guidance": "Send direct notice to parents describing what data will be collected, how it will be used, and how parents can provide or revoke consent.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.4(c)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure", "consent"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

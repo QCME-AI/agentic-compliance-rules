@@ -1,0 +1,47 @@
+{
+  "id": "GDPR-Art17-erasure",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Right to Erasure",
+  "severity": "warning",
+  "summary": "Data subjects have the right to have their personal data erased in certain circumstances.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "delete.*account",
+      "remove.*data",
+      "erasure"
+    ],
+    "keywords": [
+      "erasure",
+      "delete",
+      "right to be forgotten"
+    ]
+  },
+  "remediation": {
+    "guidance": "Inform users of their erasure rights and provide deletion request mechanism.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.17(1)",
+    "source_url": "https://gdpr.eu/article-17-right-to-be-forgotten/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "data-rights"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "pack_id": "can-spam",
+  "pack_version": "0.1.0",
+  "framework": "can-spam",
+  "description": "CAN-SPAM Act rules for commercial email compliance covering sender identification, opt-out requirements, content labeling, and prohibited practices",
+  "rule_ids": [
+    "CAN-SPAM-7704-1-header",
+    "CAN-SPAM-7704-2-subject",
+    "CAN-SPAM-7704-3-ad-identifier",
+    "CAN-SPAM-7704-4-physical-address",
+    "CAN-SPAM-7704-5-opt-out",
+    "CAN-SPAM-7704-6-opt-out-honor",
+    "CAN-SPAM-7704-7-no-opt-out-fee",
+    "CAN-SPAM-7704-8-no-transfer",
+    "CAN-SPAM-316-3-transactional",
+    "CAN-SPAM-316-4-primary-purpose",
+    "CAN-SPAM-7704-sender-identity",
+    "CAN-SPAM-7704-harvesting",
+    "CAN-SPAM-7704-dictionary",
+    "CAN-SPAM-7704-sexually-explicit"
+  ]
+}

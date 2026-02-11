@@ -1,0 +1,43 @@
+{
+  "id": "GDPR-Art12-response-time",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Response to Requests",
+  "severity": "warning",
+  "summary": "Controllers must respond to data subject requests within one month.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "response time",
+      "one month",
+      "30 days"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement process to handle and respond to data subject requests within 30 days.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.12(3)",
+    "source_url": "https://gdpr.eu/article-12-how-controllers-should-provide-personal-data-transparently/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "general",
+      "structural"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

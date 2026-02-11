@@ -1,0 +1,46 @@
+{
+  "id": "FTC-REVIEW-MANIPULATE",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Review Manipulation / Cherry-Picking",
+  "severity": "warning",
+  "summary": "Displaying only positive reviews, hiding negative reviews, or manipulating the order of reviews to mislead consumers is deceptive.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "showing.*positive\\s+reviews\\s+only",
+      "top\\s+reviews.*highest\\s+rated"
+    ],
+    "keywords": [
+      "filtered reviews",
+      "best reviews",
+      "top rated reviews"
+    ]
+  },
+  "remediation": {
+    "guidance": "Display reviews objectively. Allow consumers to sort by rating including negative reviews.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "HIPAA-502-marketing",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Marketing Use Restrictions",
+  "severity": "critical",
+  "summary": "PHI may not be used for marketing purposes without explicit authorization.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "health\\s+(information|data|records?).*marketing",
+      "patient\\s+(information|data).*promot"
+    ],
+    "keywords": [
+      "marketing",
+      "PHI",
+      "promotion",
+      "advertising"
+    ]
+  },
+  "remediation": {
+    "guidance": "Obtain written authorization before using PHI for any marketing activities.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.502(a)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "health-data"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

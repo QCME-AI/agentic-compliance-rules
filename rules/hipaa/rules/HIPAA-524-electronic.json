@@ -1,0 +1,42 @@
+{
+  "id": "HIPAA-524-electronic",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Electronic Access",
+  "severity": "info",
+  "summary": "If PHI is maintained electronically, individuals may request electronic copies.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "electronic",
+      "digital copy",
+      "format"
+    ]
+  },
+  "remediation": {
+    "guidance": "Provide electronic copies in requested format if readily producible.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.524(c)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "health-data"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,51 @@
+{
+  "id": "FTC-CLAIM-WEIGHT",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Unsubstantiated Weight Loss Claims",
+  "severity": "critical",
+  "summary": "Claims like \"Lose X pounds in Y days\" require competent and reliable scientific evidence. Most rapid weight loss claims are deceptive.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "lose\\s+\\d+\\s*(lbs?|pounds?|kg|kilos?)\\s*(in|within)\\s*\\d+\\s*(days?|weeks?)",
+      "drop\\s+\\d+\\s*(lbs?|pounds?)\\s*(fast|quick|rapid)",
+      "shed\\s+(up\\s+to\\s+)?\\d+\\s*(lbs?|pounds?)",
+      "burn\\s+\\d+\\s*calories",
+      "melt\\s+(away\\s+)?(fat|pounds)"
+    ],
+    "keywords": [
+      "weight loss",
+      "lose weight",
+      "burn fat",
+      "slim down",
+      "shed pounds"
+    ]
+  },
+  "remediation": {
+    "guidance": "Remove specific weight loss claims unless supported by clinical trials. Add disclaimer about typical results and need for diet/exercise.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/gut-check-reference-guide-media-spotting-false-weight-loss-claims",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

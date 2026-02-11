@@ -1,0 +1,32 @@
+{
+  "id": "SEC-MKT-b-promoter",
+  "version": "1.0.0",
+  "framework": "sec-marketing",
+  "title": "Promoter Requirements",
+  "severity": "warning",
+  "summary": "Investment advisers must execute written promoter agreements and implement oversight procedures",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["promoter", "solicitor", "referral"]
+  },
+  "remediation": {
+    "guidance": "Execute written promoter agreements and implement oversight procedures.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 275.206(4)-1(b)(3)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206-4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

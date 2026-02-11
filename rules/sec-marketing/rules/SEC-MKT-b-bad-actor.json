@@ -1,0 +1,32 @@
+{
+  "id": "SEC-MKT-b-bad-actor",
+  "version": "1.0.0",
+  "framework": "sec-marketing",
+  "title": "Bad Actor Disqualification",
+  "severity": "critical",
+  "summary": "Persons subject to bad actor disqualifications may not provide testimonials or endorsements",
+  "rationale": "",
+  "detection": {
+    "type": "ai-only",
+    "patterns": [],
+    "keywords": ["bad actor", "disqualification", "felony"]
+  },
+  "remediation": {
+    "guidance": "Screen all testimonial/endorsement providers for bad actor disqualifications.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 275.206(4)-1(b)(4)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206-4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "COPPA-312-4-content-notice",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "Content of Privacy Notice",
+  "severity": "warning",
+  "summary": "Children's privacy notice must list categories of personal information collected, how it is used, disclosure practices, and contact information for the operator.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(collect|gather).*from\\s+children",
+      "information.*children.*collect"
+    ],
+    "keywords": [
+      "categories of information collected from children",
+      "how we use children's data",
+      "children's personal information"
+    ]
+  },
+  "remediation": {
+    "guidance": "Include in the notice: operator contact info, categories of data collected from children, how data is used, disclosure practices, and parental rights.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.4(b)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

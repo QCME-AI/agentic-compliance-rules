@@ -1,0 +1,41 @@
+{
+  "id": "COPPA-312-3-consent",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "Verifiable Parental Consent",
+  "severity": "critical",
+  "summary": "Must obtain verifiable parental consent before collecting, using, or disclosing personal information from children under 13.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "parental\\s+consent",
+      "parent('s)?\\s+(or\\s+)?guardian('s)?\\s+(consent|permission|approval)",
+      "verif(y|iable|ied)\\s+.*consent"
+    ],
+    "keywords": [
+      "parental consent",
+      "verifiable parental consent",
+      "parent or guardian permission",
+      "consent from parent"
+    ]
+  },
+  "remediation": {
+    "guidance": "Obtain verifiable parental consent using an approved method (signed form, credit card, video conference, etc.) before collecting data from children under 13.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.3, 312.5",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["consent"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

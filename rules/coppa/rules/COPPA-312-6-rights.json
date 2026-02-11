@@ -1,0 +1,40 @@
+{
+  "id": "COPPA-312-6-rights",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "Parental Rights",
+  "severity": "warning",
+  "summary": "Parents must be able to review personal information collected from their child, request deletion, and refuse further collection.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "parent.*review.*child('s)?\\s+(data|information)",
+      "delete.*child('s)?\\s+(data|information|account)"
+    ],
+    "keywords": [
+      "parental access rights",
+      "review child's information",
+      "delete child's data",
+      "refuse further collection"
+    ]
+  },
+  "remediation": {
+    "guidance": "Provide parents the ability to: (1) review their child's personal information, (2) request deletion, and (3) refuse further collection or use.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.6",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["data-rights"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

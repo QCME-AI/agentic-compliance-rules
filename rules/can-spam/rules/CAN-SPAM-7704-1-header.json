@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-7704-1-header",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "Accurate Header Information",
+  "severity": "critical",
+  "summary": "Header information in commercial email must not be materially false or misleading. From, To, Reply-To, and routing information must be accurate.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": ["from:\\s*[^@]+@", "reply[\\s-]?to"],
+    "keywords": ["from address", "reply-to", "sender identity", "header information", "originating email"]
+  },
+  "remediation": {
+    "guidance": "Ensure From, To, Reply-To, and routing information accurately identifies the person or business who initiated the email.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "15 USC 7704(a)(1)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure", "identity"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,37 @@
+{
+  "id": "COPPA-312-8-confidentiality",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "Data Security",
+  "severity": "warning",
+  "summary": "Must establish and maintain reasonable procedures to protect the confidentiality, security, and integrity of children's personal information.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": [
+      "protect children's data",
+      "security of children's information",
+      "confidentiality",
+      "data security"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement reasonable data security measures to protect children's personal information from unauthorized access, use, or disclosure.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.8",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["security", "structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

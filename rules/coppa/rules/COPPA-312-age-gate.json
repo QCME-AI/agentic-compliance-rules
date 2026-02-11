@@ -1,0 +1,42 @@
+{
+  "id": "COPPA-312-age-gate",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "Age Screening",
+  "severity": "critical",
+  "summary": "Sites directed to a general audience that knowingly collect information from children under 13 must implement age screening.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(age|birthday)\\s+(gate|screen|check|verif)",
+      "how\\s+old\\s+are\\s+you",
+      "enter\\s+your\\s+(birth\\s*date|date\\s+of\\s+birth|age)"
+    ],
+    "keywords": [
+      "age gate",
+      "age verification",
+      "age screening",
+      "date of birth",
+      "are you over 13"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement age screening before collecting personal information. If a user indicates they are under 13, block data collection or trigger parental consent flow.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.2",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["consent"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

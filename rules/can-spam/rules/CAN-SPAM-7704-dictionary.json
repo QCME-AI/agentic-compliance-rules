@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-7704-dictionary",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "No Dictionary Attacks",
+  "severity": "critical",
+  "summary": "Cannot generate email addresses using automated tools that combine names, letters, or numbers (dictionary attacks).",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["dictionary attack", "generated email addresses", "automated address generation"]
+  },
+  "remediation": {
+    "guidance": "Do not use automated tools to generate email addresses by combining names, letters, numbers, or other characters. All recipient addresses must be legitimately obtained.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "15 USC 7704(b)(1)(B)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

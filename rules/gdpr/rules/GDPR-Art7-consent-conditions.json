@@ -1,0 +1,43 @@
+{
+  "id": "GDPR-Art7-consent-conditions",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Consent Conditions",
+  "severity": "critical",
+  "summary": "Where consent is the legal basis, controller must demonstrate the data subject consented.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "consent",
+      "demonstrate",
+      "records"
+    ]
+  },
+  "remediation": {
+    "guidance": "Keep records of consent including when, how, and what was consented to.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.7(1)",
+    "source_url": "https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "consent",
+      "structural"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

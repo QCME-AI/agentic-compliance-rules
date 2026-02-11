@@ -1,0 +1,43 @@
+{
+  "id": "HIPAA-312-audit",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Audit Controls",
+  "severity": "warning",
+  "summary": "Hardware, software, and procedures must record and examine access to ePHI.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "audit",
+      "logging",
+      "access records"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement audit logging for all ePHI access and review logs regularly.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.312(b)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/security/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "health-data",
+      "structural"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

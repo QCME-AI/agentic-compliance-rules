@@ -1,0 +1,20 @@
+{
+  "pack_id": "coppa",
+  "pack_version": "0.1.0",
+  "framework": "coppa",
+  "description": "COPPA rules for children's online privacy protection covering parental consent, privacy notices, data security, and age screening requirements",
+  "rule_ids": [
+    "COPPA-312-2-notice",
+    "COPPA-312-3-consent",
+    "COPPA-312-4-content-notice",
+    "COPPA-312-4-direct-notice",
+    "COPPA-312-5-methods",
+    "COPPA-312-6-rights",
+    "COPPA-312-7-prohibition",
+    "COPPA-312-8-confidentiality",
+    "COPPA-312-10-retention",
+    "COPPA-312-age-gate",
+    "COPPA-312-safe-harbor",
+    "COPPA-312-ed-tech"
+  ]
+}

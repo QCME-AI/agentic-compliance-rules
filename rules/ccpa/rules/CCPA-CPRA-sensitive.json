@@ -1,0 +1,40 @@
+{
+  "id": "CCPA-CPRA-sensitive",
+  "version": "1.0.0",
+  "framework": "ccpa",
+  "title": "Sensitive Personal Information",
+  "severity": "critical",
+  "summary": "Under CPRA, businesses must provide consumers the right to limit the use and disclosure of sensitive personal information.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "limit.*sensitive\\s+personal",
+      "sensitive\\s+personal\\s+information"
+    ],
+    "keywords": [
+      "sensitive personal information",
+      "limit use",
+      "CPRA",
+      "limit the use of my sensitive personal information"
+    ]
+  },
+  "remediation": {
+    "guidance": "Provide \"Limit Use of My Sensitive Personal Information\" link if applicable.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "Cal. Civ. Code § 1798.121",
+    "source_url": "https://oag.ca.gov/privacy/ccpa",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["consent", "disclosure"],
+    "jurisdiction": ["US-CA"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

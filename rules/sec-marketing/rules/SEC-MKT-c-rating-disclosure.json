@@ -1,0 +1,32 @@
+{
+  "id": "SEC-MKT-c-rating-disclosure",
+  "version": "1.0.0",
+  "framework": "sec-marketing",
+  "title": "Third-Party Rating Disclosures",
+  "severity": "warning",
+  "summary": "Third-party ratings must disclose the date, period evaluated, identity of rater, and any compensation paid",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": ["(5|4|3|2|1)[\\s-]?star", "rated\\s+#?\\d+", "top\\s+(advisor|RIA|firm)"],
+    "keywords": ["rating", "ranked", "top advisor", "best"]
+  },
+  "remediation": {
+    "guidance": "Include: date of rating, period evaluated, identity of rater, and any compensation paid.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 275.206(4)-1(c)(1)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206-4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure", "rating"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

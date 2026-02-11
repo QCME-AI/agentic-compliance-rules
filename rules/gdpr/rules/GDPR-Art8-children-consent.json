@@ -1,0 +1,43 @@
+{
+  "id": "GDPR-Art8-children-consent",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Children's Data Consent",
+  "severity": "critical",
+  "summary": "Processing personal data of children under 16 requires parental consent. Information society services directed at children must verify age and obtain parental authorization.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "parental\\s+consent",
+      "age\\s+verif",
+      "under\\s+(13|14|15|16)\\s+(years?)?",
+      "child(ren)?.*consent"
+    ],
+    "keywords": [
+      "parental consent",
+      "children's data",
+      "age verification",
+      "minors",
+      "child protection"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement age verification mechanisms and obtain verifiable parental consent for children under 16.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.8",
+    "source_url": "https://gdpr.eu/article-8-conditions-for-consent-of-children/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": ["consent"],
+    "jurisdiction": ["EU"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

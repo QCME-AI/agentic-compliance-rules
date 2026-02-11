@@ -1,0 +1,36 @@
+{
+  "id": "CCPA-100-know",
+  "version": "1.0.0",
+  "framework": "ccpa",
+  "title": "Right to Know What Is Collected",
+  "severity": "warning",
+  "summary": "Consumers have the right to know what personal information is collected about them.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": [
+      "right to know",
+      "personal information collected",
+      "categories of information"
+    ]
+  },
+  "remediation": {
+    "guidance": "Disclose categories of personal information collected and purposes.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "Cal. Civ. Code § 1798.100(a)",
+    "source_url": "https://oag.ca.gov/privacy/ccpa",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure", "structural"],
+    "jurisdiction": ["US-CA"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

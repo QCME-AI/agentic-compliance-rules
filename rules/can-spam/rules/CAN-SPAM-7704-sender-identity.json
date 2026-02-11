@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-7704-sender-identity",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "Sender Identification",
+  "severity": "critical",
+  "summary": "The sender of commercial email must be clearly identifiable. The 'From' line must accurately identify the person or entity who initiated the message.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": ["on\\s+behalf\\s+of", "sent\\s+by", "from\\s+the\\s+team\\s+at"],
+    "keywords": ["sender identification", "sent by", "on behalf of", "from the team at"]
+  },
+  "remediation": {
+    "guidance": "Clearly identify the sender in the 'From' field. If sending on behalf of another party, both the sender and the party must be identified.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "15 USC 7704(a)(1)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure", "identity"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

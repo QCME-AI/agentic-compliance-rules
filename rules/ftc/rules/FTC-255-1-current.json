@@ -1,0 +1,42 @@
+{
+  "id": "FTC-255-1-current",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Current User Requirement",
+  "severity": "warning",
+  "summary": "Endorsers must be bona fide users of the product at time of endorsement.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "current user",
+      "bona fide",
+      "actual user"
+    ]
+  },
+  "remediation": {
+    "guidance": "Ensure endorsers are current users of the product or service.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "255.1(c)",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "endorsement"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

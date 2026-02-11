@@ -1,0 +1,32 @@
+{
+  "id": "SEC-MKT-e-hypothetical-general",
+  "version": "1.0.0",
+  "framework": "sec-marketing",
+  "title": "Hypothetical Performance Requirements",
+  "severity": "critical",
+  "summary": "Restrict hypothetical performance to sophisticated audiences and include all limitations and assumptions",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["hypothetical", "backtested", "simulated"]
+  },
+  "remediation": {
+    "guidance": "Restrict hypothetical performance to sophisticated audiences. Include all limitations and assumptions.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 275.206(4)-1(e)(1)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206-4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["performance"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

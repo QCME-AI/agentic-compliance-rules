@@ -1,0 +1,158 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qcme.ai/schemas/rule.schema.json",
+  "title": "QCME Compliance Rule",
+  "type": "object",
+  "required": [
+    "id",
+    "version",
+    "framework",
+    "title",
+    "severity",
+    "summary",
+    "detection",
+    "remediation",
+    "source",
+    "metadata"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[A-Z]+-[A-Za-z0-9-]+$",
+      "description": "Immutable rule identifier"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semver version of this rule"
+    },
+    "framework": {
+      "type": "string",
+      "enum": [
+        "ftc",
+        "hipaa",
+        "gdpr",
+        "sec-482",
+        "sec-marketing",
+        "ccpa",
+        "coppa",
+        "can-spam",
+        "finra",
+        "gips",
+        "gmc",
+        "visual-ai"
+      ],
+      "description": "Framework identifier"
+    },
+    "title": {
+      "type": "string",
+      "minLength": 5
+    },
+    "severity": {
+      "type": "string",
+      "enum": ["critical", "warning", "info"]
+    },
+    "summary": {
+      "type": "string",
+      "minLength": 10
+    },
+    "rationale": {
+      "type": "string"
+    },
+    "detection": {
+      "type": "object",
+      "required": ["type"],
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["pattern", "keyword", "hybrid", "ai-only"]
+        },
+        "patterns": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "remediation": {
+      "type": "object",
+      "required": ["guidance"],
+      "properties": {
+        "guidance": {
+          "type": "string",
+          "minLength": 10
+        },
+        "examples": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": false
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "source_type",
+        "policy_status",
+        "source_url",
+        "retrieved_at"
+      ],
+      "properties": {
+        "source_type": {
+          "type": "string",
+          "enum": ["public_law", "guidance", "contractual"]
+        },
+        "policy_status": {
+          "type": "string",
+          "enum": [
+            "allowed",
+            "allowed_with_attribution",
+            "derivative_only",
+            "needs_permission"
+          ]
+        },
+        "citation": {
+          "type": "string"
+        },
+        "source_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "retrieved_at": {
+          "type": "string",
+          "format": "date"
+        },
+        "attribution_required": {
+          "type": "boolean"
+        }
+      },
+      "additionalProperties": false
+    },
+    "metadata": {
+      "type": "object",
+      "properties": {
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "jurisdiction": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "content_types": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "owner": {
+          "type": "string"
+        }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

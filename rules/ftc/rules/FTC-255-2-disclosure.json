@@ -1,0 +1,43 @@
+{
+  "id": "FTC-255-2-disclosure",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Consumer Endorsement Disclosure",
+  "severity": "warning",
+  "summary": "Consumer endorsements should clearly disclose what the typical consumer experience is.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "typical",
+      "average",
+      "consumer experience"
+    ]
+  },
+  "remediation": {
+    "guidance": "Include clear disclosure of typical outcomes alongside testimonials.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "255.2(b)",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "endorsement",
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

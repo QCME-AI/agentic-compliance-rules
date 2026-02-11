@@ -1,0 +1,48 @@
+{
+  "id": "FTC-255-5-social",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Social Media Disclosure",
+  "severity": "critical",
+  "summary": "Social media posts by paid influencers must clearly disclose the material connection.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "@\\w+\\s+(says?|loves?|recommends?)",
+      "influencer",
+      "ambassador"
+    ],
+    "keywords": [
+      "social media",
+      "influencer",
+      "#ad",
+      "sponsored"
+    ]
+  },
+  "remediation": {
+    "guidance": "Use #ad or \"Sponsored\" at the beginning of posts, not hidden in hashtags.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "255.5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/disclosures-101-social-media-influencers",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,43 @@
+{
+  "id": "FTC-bait-switch",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "No Bait and Switch",
+  "severity": "critical",
+  "summary": "Advertising an offer that is not genuinely available to lure customers is illegal.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "bait",
+      "switch",
+      "unavailable",
+      "sold out"
+    ]
+  },
+  "remediation": {
+    "guidance": "Ensure advertised products/prices are actually available to consumers.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/advertising-marketing",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

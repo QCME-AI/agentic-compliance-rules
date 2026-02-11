@@ -1,0 +1,43 @@
+{
+  "id": "GDPR-Art14-indirect-collection",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Indirect Data Collection Disclosure",
+  "severity": "warning",
+  "summary": "When personal data is not obtained directly from the data subject, must disclose the source and categories of data within a reasonable period.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "obtained\\s+from\\s+third\\s+part",
+      "data\\s+source",
+      "publicly\\s+available\\s+source",
+      "received\\s+from"
+    ],
+    "keywords": [
+      "source of data",
+      "third party data",
+      "data broker",
+      "publicly available",
+      "indirect collection"
+    ]
+  },
+  "remediation": {
+    "guidance": "Disclose the source of personal data when it was not collected directly from the data subject, including the categories of data obtained.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.14",
+    "source_url": "https://gdpr.eu/article-14-personal-data-not-obtained-from-data-subject/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": ["disclosure"],
+    "jurisdiction": ["EU"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

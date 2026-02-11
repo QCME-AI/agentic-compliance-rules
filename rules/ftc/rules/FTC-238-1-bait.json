@@ -1,0 +1,47 @@
+{
+  "id": "FTC-238-1-bait",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "No Bait Advertising",
+  "severity": "critical",
+  "summary": "Bait advertising is an alluring but insincere offer to sell a product which the advertiser does not intend to sell.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "while\\s+supplies\\s+last",
+      "limited\\s+quantities?",
+      "limited\\s+stock"
+    ],
+    "keywords": [
+      "while supplies last",
+      "limited quantity",
+      "limited stock"
+    ]
+  },
+  "remediation": {
+    "guidance": "Ensure advertised products are available in reasonable quantities. Do not use low prices just to lure customers.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 238.1",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-238#238.1",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

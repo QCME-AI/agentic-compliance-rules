@@ -1,0 +1,47 @@
+{
+  "id": "HIPAA-520-website",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Website Privacy Notice",
+  "severity": "warning",
+  "summary": "Entities with websites must post Notice of Privacy Practices prominently online.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "notice\\s+of\\s+privacy\\s+practices",
+      "privacy\\s+practices.*website",
+      "HIPAA\\s+privacy"
+    ],
+    "keywords": [
+      "notice of privacy practices",
+      "HIPAA privacy notice",
+      "privacy practices online"
+    ]
+  },
+  "remediation": {
+    "guidance": "Post full Notice of Privacy Practices on website and link from all PHI collection pages.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.520(c)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "privacy"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

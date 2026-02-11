@@ -1,0 +1,1 @@
+Your medical data is encrypted both in transit and at rest using HIPAA-compliant security protocols.

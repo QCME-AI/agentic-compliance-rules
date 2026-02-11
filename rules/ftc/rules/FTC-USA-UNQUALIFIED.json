@@ -1,0 +1,49 @@
+{
+  "id": "FTC-USA-UNQUALIFIED",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Unqualified \"Made in USA\" Claim",
+  "severity": "critical",
+  "summary": "Unqualified \"Made in USA\" claims require that the product be \"all or virtually all\" made in the United States.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "made\\s+in\\s+(the\\s+)?u\\.?s\\.?a?\\.?(?!.*assembled)",
+      "american\\s+made",
+      "proudly\\s+made\\s+in\\s+(america|u\\.?s\\.?)",
+      "100%\\s+american"
+    ],
+    "keywords": [
+      "made in USA",
+      "American made",
+      "made in America",
+      "USA made"
+    ]
+  },
+  "remediation": {
+    "guidance": "Verify that final assembly and all significant parts/processing are in the USA. If not, qualify the claim.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5 / Made in USA Policy",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/complying-made-usa-standard",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-7704-2-subject",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "Non-Deceptive Subject Lines",
+  "severity": "critical",
+  "summary": "Subject lines must not be deceptive or misleading about the content of the message.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": ["re:\\s", "fw(d)?:\\s", "urgent.*act\\s+now", "you('ve)?\\s+won"],
+    "keywords": ["deceptive subject line", "misleading subject", "subject line accuracy"]
+  },
+  "remediation": {
+    "guidance": "Subject lines must accurately reflect the content of the email. Do not use deceptive subject lines like fake Re: or Fwd: prefixes.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "15 USC 7704(a)(2)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

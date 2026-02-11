@@ -1,0 +1,41 @@
+{
+  "id": "COPPA-312-5-methods",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "Consent Methods",
+  "severity": "warning",
+  "summary": "Verifiable parental consent must use a method reasonably calculated to ensure the consenting person is the child's parent.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "signed\\s+(consent|authorization)\\s+form",
+      "credit\\s+card.*verif",
+      "video\\s+(conference|call).*consent"
+    ],
+    "keywords": [
+      "consent method",
+      "signed consent form",
+      "knowledge-based authentication",
+      "video conference consent"
+    ]
+  },
+  "remediation": {
+    "guidance": "Use an FTC-approved consent verification method: signed form returned by mail/fax/email scan, credit card transaction, video conference, or government ID check.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.5(b)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["consent", "structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

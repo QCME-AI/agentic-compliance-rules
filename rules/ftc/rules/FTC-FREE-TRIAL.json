@@ -1,0 +1,51 @@
+{
+  "id": "FTC-FREE-TRIAL",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Free Trial Auto-Charge Without Disclosure",
+  "severity": "critical",
+  "summary": "Free trials that automatically convert to paid subscriptions must clearly disclose the conversion terms before enrollment.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "free\\s+trial.*\\$\\d+",
+      "try\\s+(free|it)\\s*(for)?\\s*\\d+\\s*days?",
+      "(starts?|begins?)\\s+(free|at\\s+\\$0)",
+      "cancel\\s+(anytime|before)",
+      "after\\s+(free\\s+)?trial.*\\$\\d+"
+    ],
+    "keywords": [
+      "free trial",
+      "trial period",
+      "auto-renew",
+      "cancel anytime",
+      "after trial"
+    ]
+  },
+  "remediation": {
+    "guidance": "Clearly disclose before checkout: (1) Free trial length, (2) Post-trial price, (3) How to cancel. Get affirmative consent.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5 / ROSCA",
+    "source_url": "https://www.ftc.gov/business-guidance/news-events/news/press-releases/2021/10/ftc-brings-first-case-challenging-illegal-dark-patterns-trick",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

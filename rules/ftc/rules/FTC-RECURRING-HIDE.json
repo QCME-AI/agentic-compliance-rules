@@ -1,0 +1,50 @@
+{
+  "id": "FTC-RECURRING-HIDE",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Hidden Recurring Charges",
+  "severity": "critical",
+  "summary": "Recurring charges must be clearly disclosed upfront, not hidden in fine print or terms of service.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "then\\s+\\$\\d+(\\.\\d+)?\\s*/(mo|month|yr|year)",
+      "recurring\\s+charge",
+      "billed\\s+every\\s+\\d+\\s+(days?|weeks?|months?)",
+      "\\*\\s*recurring"
+    ],
+    "keywords": [
+      "recurring",
+      "monthly charge",
+      "annual fee",
+      "billed every",
+      "automatic payment"
+    ]
+  },
+  "remediation": {
+    "guidance": "Display recurring charge amount and frequency prominently near the price and in checkout summary.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "ROSCA",
+    "source_url": "https://www.ftc.gov/business-guidance/legal-library/browse/rules/negative-option-rule",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

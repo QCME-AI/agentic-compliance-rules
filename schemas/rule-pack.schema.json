@@ -1,0 +1,40 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://qcme.ai/schemas/rule-pack.schema.json",
+  "title": "QCME Rule Pack",
+  "type": "object",
+  "required": ["pack_id", "pack_version", "framework", "rule_ids"],
+  "properties": {
+    "pack_id": {
+      "type": "string",
+      "description": "Unique pack identifier"
+    },
+    "pack_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semver version of this pack"
+    },
+    "framework": {
+      "type": "string",
+      "description": "Framework this pack covers"
+    },
+    "description": {
+      "type": "string"
+    },
+    "rule_ids": {
+      "type": "array",
+      "items": { "type": "string" },
+      "minItems": 1,
+      "description": "Ordered list of rule IDs in this pack"
+    },
+    "compatibility": {
+      "type": "object",
+      "properties": {
+        "engine_min_version": { "type": "string" },
+        "engine_max_version": { "type": "string" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false
+}

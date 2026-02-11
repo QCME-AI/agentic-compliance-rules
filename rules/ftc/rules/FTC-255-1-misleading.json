@@ -1,0 +1,39 @@
+{
+  "id": "FTC-255-1-misleading",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Endorsements Cannot Be Misleading",
+  "severity": "critical",
+  "summary": "Endorsements may not contain any representations that would be deceptive or could not be substantiated if made directly by the advertiser.",
+  "rationale": "",
+  "detection": {
+    "type": "ai-only"
+  },
+  "remediation": {
+    "guidance": "Verify that all claims in endorsements can be substantiated. Remove unverifiable statements.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 255.1(b)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255#255.1",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "endorsement",
+      "claims",
+      "structural"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "FTC-260-8-degradable",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Degradable and Biodegradable Claims",
+  "severity": "critical",
+  "summary": "Degradable claims require evidence that the product will completely break down within one year under normal disposal conditions.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "biodegradable",
+      "bio[\\s-]?degradable",
+      "degrades?\\s+naturally",
+      "breaks?\\s+down\\s+(naturally|quickly)"
+    ],
+    "keywords": [
+      "biodegradable",
+      "degradable",
+      "breaks down",
+      "decomposes"
+    ]
+  },
+  "remediation": {
+    "guidance": "Only claim biodegradable if product fully decomposes within 1 year. Qualify for specific disposal conditions.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 260.8",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-260#260.8",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

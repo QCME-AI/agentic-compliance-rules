@@ -1,0 +1,47 @@
+{
+  "id": "FTC-233-4-bargain",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Bargain Offers Based on Other Purchases",
+  "severity": "warning",
+  "summary": "Offers like \"Buy one, get one free\" must not inflate the price of the first item to recover the cost of the \"free\" item.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "buy\\s+one.*get\\s+one",
+      "bogo",
+      "buy\\s+\\d+.*get\\s+\\d+"
+    ],
+    "keywords": [
+      "BOGO",
+      "buy one get one",
+      "buy 2 get 1"
+    ]
+  },
+  "remediation": {
+    "guidance": "In BOGO offers, the first item price must be the regular price. Do not inflate to cover free item.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 233.4",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233#233.4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "pricing"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

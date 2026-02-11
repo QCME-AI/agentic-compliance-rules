@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-7704-5-opt-out",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "Opt-Out Mechanism Required",
+  "severity": "critical",
+  "summary": "Every commercial email must include a clear and conspicuous mechanism to opt out of future messages.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": ["unsubscribe", "opt[\\s-]?out", "manage.*preferences", "email\\s+preferences", "stop\\s+(receiving|these)\\s+(emails|messages)"],
+    "keywords": ["unsubscribe", "opt out", "manage email preferences", "stop receiving emails", "remove from list"]
+  },
+  "remediation": {
+    "guidance": "Include a clear, conspicuous, and functional opt-out mechanism in every commercial email. Must be operational for at least 30 days after sending.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "15 USC 7704(a)(3)(A)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["consent", "opt-out"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

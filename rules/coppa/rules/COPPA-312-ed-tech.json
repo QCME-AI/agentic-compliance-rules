@@ -1,0 +1,42 @@
+{
+  "id": "COPPA-312-ed-tech",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "Educational Technology Exception",
+  "severity": "warning",
+  "summary": "Schools may consent on behalf of parents for educational technology services, but only for school-authorized educational purposes.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "school.*consent",
+      "educational\\s+(purpose|technology|service)",
+      "teacher.*consent.*behalf"
+    ],
+    "keywords": [
+      "school consent",
+      "educational purpose",
+      "ed-tech",
+      "school-authorized",
+      "FERPA"
+    ]
+  },
+  "remediation": {
+    "guidance": "When relying on school consent, use collected data only for school-authorized educational purposes. Do not use for commercial purposes.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.5(c)(3)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["consent", "education"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

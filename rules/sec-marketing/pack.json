@@ -1,0 +1,26 @@
+{
+  "pack_id": "sec-marketing",
+  "pack_version": "0.1.0",
+  "framework": "sec-marketing",
+  "description": "SEC Marketing Rule 206(4)-1 - Investment adviser advertising rules covering testimonials, endorsements, performance, ratings, and hypothetical returns",
+  "rule_ids": [
+    "SEC-MKT-a-untrue",
+    "SEC-MKT-a-omission",
+    "SEC-MKT-a-misleading",
+    "SEC-MKT-b-testimonial-disclosure",
+    "SEC-MKT-b-endorsement-disclosure",
+    "SEC-MKT-b-promoter",
+    "SEC-MKT-b-bad-actor",
+    "SEC-MKT-c-rating-disclosure",
+    "SEC-MKT-c-rating-questionnaire",
+    "SEC-MKT-d-gross-net",
+    "SEC-MKT-d-time-periods",
+    "SEC-MKT-d-composite",
+    "SEC-MKT-d-portability",
+    "SEC-MKT-e-hypothetical-general",
+    "SEC-MKT-e-hypothetical-disclosure",
+    "SEC-MKT-f-predecessor",
+    "SEC-MKT-extracted-performance",
+    "SEC-MKT-related-performance"
+  ]
+}

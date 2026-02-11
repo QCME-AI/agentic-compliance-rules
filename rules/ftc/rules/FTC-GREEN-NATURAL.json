@@ -1,0 +1,37 @@
+{
+  "id": "FTC-GREEN-NATURAL",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Misleading Natural or Organic Claims",
+  "severity": "warning",
+  "summary": "\"Natural\" and \"organic\" claims should be specific and substantiated. For food/cosmetics, USDA standards may apply.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "\\b(100%\\s+)?(all[\\s-]?)natural\\b",
+      "\\bnatural\\s+(ingredients?|formula|product)\\b",
+      "\\borganic\\b(?!.*certified)",
+      "made\\s+with\\s+natural"
+    ],
+    "keywords": ["natural", "all natural", "organic", "naturally derived"]
+  },
+  "remediation": {
+    "guidance": "Specify what makes the product natural. For organic claims, obtain USDA certification if applicable.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 260.4",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-260",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["green-claims", "natural", "organic", "environmental"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

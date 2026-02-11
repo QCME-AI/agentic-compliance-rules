@@ -1,0 +1,43 @@
+{
+  "id": "HIPAA-312-access-control",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Access Control Requirements",
+  "severity": "critical",
+  "summary": "Technical policies must limit access to ePHI to authorized persons.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "access control",
+      "authentication",
+      "user ID"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement unique user IDs, automatic logoff, and encryption.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.312(a)(1)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/security/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "health-data",
+      "structural"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

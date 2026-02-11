@@ -1,0 +1,47 @@
+{
+  "id": "FTC-REVIEW-FAKE",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Fake or AI-Generated Reviews",
+  "severity": "critical",
+  "summary": "Using fake, fabricated, or AI-generated reviews to deceive consumers is prohibited. Reviews must reflect genuine consumer experiences.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "as\\s+an\\s+ai",
+      "i\\s+cannot\\s+provide",
+      "(amazing|excellent|fantastic)\\s+product.*(highly|would)\\s+recommend"
+    ],
+    "keywords": [
+      "verified purchase",
+      "authentic review",
+      "customer feedback"
+    ]
+  },
+  "remediation": {
+    "guidance": "Remove all fake or AI-generated reviews. Only display authentic customer reviews with verified purchases.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

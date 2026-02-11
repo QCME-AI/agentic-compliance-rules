@@ -1,0 +1,48 @@
+{
+  "id": "FTC-DARK-CONFIRM",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Dark Pattern: Confirmshaming",
+  "severity": "warning",
+  "summary": "Using manipulative language to shame users out of declining offers is a deceptive dark pattern.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "no,?\\s+i\\s+(don'?t|do\\s+not)\\s+(want|like|need)",
+      "no\\s+thanks,?\\s+i\\s+(hate|don'?t\\s+like)",
+      "i\\s+(prefer|want)\\s+to\\s+pay\\s+(more|full)",
+      "i\\s+don'?t\\s+want\\s+to\\s+save"
+    ],
+    "keywords": [
+      "no thanks I",
+      "I prefer to pay",
+      "I don't want to save"
+    ]
+  },
+  "remediation": {
+    "guidance": "Use neutral opt-out language. Replace \"No, I don't want savings\" with \"No thanks\" or \"Decline\".",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/news-events/news/press-releases/2022/09/ftc-report-shows-rise-sophisticated-dark-patterns-designed-trick",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "FTC-DARK-CANCEL",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Dark Pattern: Difficult Cancellation",
+  "severity": "critical",
+  "summary": "Making cancellation significantly harder than sign-up is a deceptive dark pattern.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "must\\s+call\\s+to\\s+cancel",
+      "call.*to\\s+cancel.*subscription",
+      "cancellation.*phone\\s+(only|required)",
+      "visit.*in[\\s-]?person.*cancel"
+    ],
+    "keywords": [
+      "call to cancel",
+      "cancel by phone",
+      "contact us to cancel"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement \"click-to-cancel\" - online cancellation should be as easy as online sign-up.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/news-events/news/press-releases/2021/10/ftc-brings-first-case-challenging-illegal-dark-patterns-trick",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

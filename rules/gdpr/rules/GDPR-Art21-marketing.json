@@ -1,0 +1,48 @@
+{
+  "id": "GDPR-Art21-marketing",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Right to Object to Marketing",
+  "severity": "critical",
+  "summary": "Data subjects have an absolute right to object to direct marketing at any time.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "unsubscribe",
+      "marketing\\s+preferences",
+      "email\\s+preferences"
+    ],
+    "keywords": [
+      "marketing",
+      "unsubscribe",
+      "opt-out",
+      "preferences"
+    ]
+  },
+  "remediation": {
+    "guidance": "Provide easy opt-out from all marketing communications.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.21(2)",
+    "source_url": "https://gdpr.eu/article-21-right-to-object/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "data-rights"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

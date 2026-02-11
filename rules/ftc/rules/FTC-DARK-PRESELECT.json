@@ -1,0 +1,48 @@
+{
+  "id": "FTC-DARK-PRESELECT",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Dark Pattern: Pre-Selected Add-Ons",
+  "severity": "warning",
+  "summary": "Pre-checking boxes for add-ons, insurance, or upgrades without user action is a deceptive dark pattern.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "pre[\\s-]?selected",
+      "(add|include).*by\\s+default",
+      "opt[\\s-]?out.*uncheck"
+    ],
+    "keywords": [
+      "pre-selected",
+      "added by default",
+      "opt-out",
+      "uncheck to remove"
+    ]
+  },
+  "remediation": {
+    "guidance": "Do not pre-select any optional add-ons. Let users affirmatively choose extras.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/news-events/news/press-releases/2022/09/ftc-report-shows-rise-sophisticated-dark-patterns-designed-trick",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

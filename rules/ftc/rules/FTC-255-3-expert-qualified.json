@@ -1,0 +1,48 @@
+{
+  "id": "FTC-255-3-expert-qualified",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Expert Endorsers Must Be Qualified",
+  "severity": "critical",
+  "summary": "An expert endorser must possess the expertise represented by the endorsement and must have actually evaluated the product.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "doctor\\s+(recommended|approved)",
+      "expert\\s+(review|opinion|approved)",
+      "dermatologist\\s+tested",
+      "clinically\\s+(tested|proven)"
+    ],
+    "keywords": [
+      "doctor recommended",
+      "expert approved",
+      "clinically tested"
+    ]
+  },
+  "remediation": {
+    "guidance": "Verify expert credentials. Ensure expert has actually examined/tested the product before endorsing.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 255.3(a)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255#255.3",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "endorsement"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

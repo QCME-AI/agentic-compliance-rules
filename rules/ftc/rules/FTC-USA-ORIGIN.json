@@ -1,0 +1,47 @@
+{
+  "id": "FTC-USA-ORIGIN",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Country of Origin Misrepresentation",
+  "severity": "critical",
+  "summary": "Misrepresenting country of origin through flags, symbols, or misleading statements is deceptive.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(american|usa)\\s+(flag|quality|pride)",
+      "patriotic.*made"
+    ],
+    "keywords": [
+      "country of origin",
+      "US flag",
+      "American flag",
+      "patriotic"
+    ]
+  },
+  "remediation": {
+    "guidance": "Accurately represent country of origin. Do not use US flags/symbols for foreign-made products.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/complying-made-usa-standard",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

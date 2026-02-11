@@ -1,0 +1,42 @@
+{
+  "id": "FTC-255-0-scope",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Endorsement Guide Scope",
+  "severity": "info",
+  "summary": "FTC Endorsement Guides apply to endorsements and testimonials in advertising.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "endorsement",
+      "testimonial",
+      "advertising"
+    ]
+  },
+  "remediation": {
+    "guidance": "Apply these guidelines to all endorsements in marketing materials.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "255.0",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "endorsement"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

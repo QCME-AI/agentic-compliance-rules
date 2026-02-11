@@ -1,0 +1,48 @@
+{
+  "id": "FTC-CLAIM-CLINICAL",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "\"Clinically Proven\" Without Clinical Trials",
+  "severity": "critical",
+  "summary": "Claims like \"clinically proven\" or \"clinically tested\" require actual clinical trials supporting the specific claim.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "clinically\\s+(proven|tested|shown|demonstrated)",
+      "clinical\\s+(studies?|trials?|evidence)\\s+(show|prove|demonstrate)",
+      "backed\\s+by\\s+(science|research|studies)"
+    ],
+    "keywords": [
+      "clinically proven",
+      "clinical study",
+      "scientific evidence",
+      "research shows"
+    ]
+  },
+  "remediation": {
+    "guidance": "Remove \"clinically proven\" unless backed by published, peer-reviewed clinical trials. Cite specific studies.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

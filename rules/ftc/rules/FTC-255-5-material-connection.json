@@ -1,0 +1,52 @@
+{
+  "id": "FTC-255-5-material-connection",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Material Connection Disclosure Required",
+  "severity": "critical",
+  "summary": "When there is a material connection between an endorser and seller that would affect the weight of the endorsement, it must be disclosed.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "#?ad\\b",
+      "#?sponsored",
+      "#?partner(ship)?",
+      "paid\\s+(partnership|promotion|ad)",
+      "in\\s+collaboration\\s+with"
+    ],
+    "keywords": [
+      "#ad",
+      "#sponsored",
+      "paid partnership",
+      "affiliate",
+      "material connection"
+    ]
+  },
+  "remediation": {
+    "guidance": "Disclose all material connections: payments, free products, employment, family relationships, equity stakes.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 255.5",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255#255.5",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "endorsement",
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,47 @@
+{
+  "id": "FTC-251-1-conditions",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "\"Free\" Offer Conditions Must Be Disclosed",
+  "severity": "critical",
+  "summary": "All conditions and obligations for receiving a \"free\" item must be clearly and conspicuously disclosed.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "free\\s*\\*",
+      "free.*conditions\\s+apply",
+      "free.*see\\s+(details|terms)"
+    ],
+    "keywords": [
+      "conditions apply",
+      "terms",
+      "with purchase"
+    ]
+  },
+  "remediation": {
+    "guidance": "Disclose all conditions upfront: \"Free with $50 purchase\" not hidden in fine print.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 251.1(b)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-251#251.1",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "HIPAA-web-forms",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Secure PHI Collection Forms",
+  "severity": "critical",
+  "summary": "Web forms collecting PHI must use secure transmission and link to privacy notice.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "type=[\"']?(text|email)[\"']?.*name=[\"']?(ssn|social|medical|health|diagnosis)",
+      "<form[^>]*(?!https)"
+    ],
+    "keywords": [
+      "form",
+      "PHI collection",
+      "secure",
+      "HTTPS"
+    ]
+  },
+  "remediation": {
+    "guidance": "Use HTTPS for all forms. Link to Notice of Privacy Practices near PHI fields.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.312",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "privacy",
+      "health-data"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

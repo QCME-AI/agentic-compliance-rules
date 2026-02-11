@@ -1,0 +1,32 @@
+{
+  "id": "SEC-MKT-d-gross-net",
+  "version": "1.0.0",
+  "framework": "sec-marketing",
+  "title": "Gross and Net Performance",
+  "severity": "critical",
+  "summary": "Must show net performance alongside gross performance with equal prominence",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["gross", "net", "fees deducted"]
+  },
+  "remediation": {
+    "guidance": "Always show net performance alongside gross performance with equal prominence.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 275.206(4)-1(d)(1)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206-4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["performance", "disclosure"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

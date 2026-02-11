@@ -1,0 +1,36 @@
+{
+  "id": "CCPA-125-non-discrimination",
+  "version": "1.0.0",
+  "framework": "ccpa",
+  "title": "Non-Discrimination",
+  "severity": "warning",
+  "summary": "Businesses cannot discriminate against consumers for exercising their CCPA rights.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": [
+      "non-discrimination",
+      "equal service",
+      "financial incentive"
+    ]
+  },
+  "remediation": {
+    "guidance": "Do not deny services, charge different prices, or provide different quality based on privacy choices.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "Cal. Civ. Code § 1798.125(a)",
+    "source_url": "https://oag.ca.gov/privacy/ccpa",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["structural"],
+    "jurisdiction": ["US-CA"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

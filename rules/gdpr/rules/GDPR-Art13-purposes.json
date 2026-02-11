@@ -1,0 +1,48 @@
+{
+  "id": "GDPR-Art13-purposes",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Purpose and Legal Basis Disclosure",
+  "severity": "critical",
+  "summary": "Must disclose purposes and legal basis for processing at collection.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "process(ing|ed)?\\s+(your|personal)\\s+data\\s+(for|to)",
+      "legal\\s+basis\\s+for\\s+process",
+      "purpose\\s+of\\s+(the\\s+)?process"
+    ],
+    "keywords": [
+      "purpose of processing",
+      "legal basis for processing",
+      "we process your data",
+      "data processing purposes"
+    ]
+  },
+  "remediation": {
+    "guidance": "Clearly state why data is being collected and the legal basis.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.13(1)(c)",
+    "source_url": "https://gdpr.eu/article-13-personal-data-collected/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

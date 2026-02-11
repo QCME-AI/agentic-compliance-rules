@@ -1,0 +1,43 @@
+{
+  "id": "GDPR-Art5-purpose",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Purpose Limitation",
+  "severity": "warning",
+  "summary": "Personal data must be collected for specified, explicit and legitimate purposes.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "purpose",
+      "specified",
+      "legitimate"
+    ]
+  },
+  "remediation": {
+    "guidance": "Clearly state purposes at collection and do not process for incompatible purposes.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.5(1)(b)",
+    "source_url": "https://gdpr.eu/article-5-how-to-process-personal-data/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "general",
+      "structural"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

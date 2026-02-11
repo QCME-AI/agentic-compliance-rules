@@ -1,0 +1,46 @@
+{
+  "id": "GDPR-Art22-automated-decisions",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Automated Decision-Making Disclosure",
+  "severity": "critical",
+  "summary": "Data subjects have the right not to be subject to decisions based solely on automated processing, including profiling. Must disclose existence of automated decision-making and meaningful information about the logic.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "automated\\s+decision",
+      "profiling",
+      "algorithm(ic)?\\s+(decision|processing)",
+      "AI[\\s-]?(based|driven|powered)\\s+decision",
+      "machine\\s+learning.*decision",
+      "automat(ed|ic)\\s+(assessment|scoring|rejection)"
+    ],
+    "keywords": [
+      "automated decision-making",
+      "profiling",
+      "algorithmic decision",
+      "automated processing",
+      "credit scoring",
+      "automated assessment"
+    ]
+  },
+  "remediation": {
+    "guidance": "Disclose existence of automated decision-making, meaningful information about the logic involved, and the significance and envisaged consequences.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.22",
+    "source_url": "https://gdpr.eu/article-22-automated-individual-decision-making/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": ["disclosure", "data-rights"],
+    "jurisdiction": ["EU"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "GDPR-Art7-withdraw",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Right to Withdraw Consent",
+  "severity": "critical",
+  "summary": "Data subjects must be able to withdraw consent as easily as they gave it.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "unsubscribe",
+      "opt[\\s-]?out",
+      "withdraw\\s+consent"
+    ],
+    "keywords": [
+      "withdraw",
+      "unsubscribe",
+      "opt-out"
+    ]
+  },
+  "remediation": {
+    "guidance": "Provide clear and easy mechanism to withdraw consent at any time.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.7(3)",
+    "source_url": "https://gdpr.eu/article-7-how-to-get-consent-to-collect-personal-data/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "consent",
+      "data-rights"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

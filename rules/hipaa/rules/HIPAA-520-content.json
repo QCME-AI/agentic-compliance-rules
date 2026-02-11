@@ -1,0 +1,49 @@
+{
+  "id": "HIPAA-520-content",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Privacy Notice Content Requirements",
+  "severity": "warning",
+  "summary": "Notice must describe uses/disclosures, individual rights, and entity duties.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "uses?\\s+and\\s+disclosures?\\s+of\\s+(your\\s+)?(protected\\s+)?health\\s+information",
+      "your\\s+rights.*health\\s+information",
+      "PHI"
+    ],
+    "keywords": [
+      "uses and disclosures",
+      "protected health information",
+      "your health information rights",
+      "PHI"
+    ]
+  },
+  "remediation": {
+    "guidance": "Include all required content: uses, disclosures, rights, complaints process.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.520(b)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure",
+      "privacy"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

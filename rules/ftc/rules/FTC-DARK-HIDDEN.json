@@ -1,0 +1,50 @@
+{
+  "id": "FTC-DARK-HIDDEN",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Dark Pattern: Hidden Costs at Checkout",
+  "severity": "critical",
+  "summary": "Revealing hidden fees, taxes, or charges only at checkout is a deceptive drip pricing dark pattern.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(service|processing|handling|convenience)\\s+fee",
+      "fee.*added.*checkout",
+      "\\+\\s*\\$\\d+.*fee",
+      "additional\\s+(fee|charge|cost)s?\\s+(may\\s+)?apply"
+    ],
+    "keywords": [
+      "service fee",
+      "processing fee",
+      "convenience fee",
+      "fees apply",
+      "additional charges"
+    ]
+  },
+  "remediation": {
+    "guidance": "Display total price including all mandatory fees upfront. No surprise charges at checkout.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/news-events/news/press-releases/2022/10/ftc-proposes-rule-ban-junk-fees",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "pricing"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

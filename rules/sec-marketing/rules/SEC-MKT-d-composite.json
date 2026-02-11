@@ -1,0 +1,32 @@
+{
+  "id": "SEC-MKT-d-composite",
+  "version": "1.0.0",
+  "framework": "sec-marketing",
+  "title": "Composite Performance Requirements",
+  "severity": "warning",
+  "summary": "Must create composites of similar strategy accounts rather than showing cherry-picked account performance",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["composite", "aggregated", "similar strategies"]
+  },
+  "remediation": {
+    "guidance": "Create composites of similar strategy accounts rather than showing cherry-picked account performance.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 275.206(4)-1(d)(3)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206-4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["performance", "structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

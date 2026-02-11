@@ -1,0 +1,40 @@
+{
+  "id": "COPPA-312-7-prohibition",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "No Conditioning on Data Collection",
+  "severity": "critical",
+  "summary": "Cannot condition a child's participation in an activity on providing more personal information than is reasonably necessary.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(require|must\\s+provide).*to\\s+(play|participate|access|use)",
+      "required.*field.*children"
+    ],
+    "keywords": [
+      "required information",
+      "cannot condition participation",
+      "reasonably necessary",
+      "data minimization for children"
+    ]
+  },
+  "remediation": {
+    "guidance": "Do not require children to disclose more information than is reasonably necessary to participate in an activity. Only collect what is strictly needed.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.7",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["consent", "data-minimization"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

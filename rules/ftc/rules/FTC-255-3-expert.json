@@ -1,0 +1,43 @@
+{
+  "id": "FTC-255-3-expert",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Expert Qualification",
+  "severity": "warning",
+  "summary": "Expert endorsers must have qualifications to give expert opinion on the subject.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "expert",
+      "qualified",
+      "credentials",
+      "specialist"
+    ]
+  },
+  "remediation": {
+    "guidance": "Verify expert credentials match the subject matter of endorsement.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "255.3",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

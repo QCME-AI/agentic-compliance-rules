@@ -1,0 +1,36 @@
+{
+  "id": "CCPA-130-methods",
+  "version": "1.0.0",
+  "framework": "ccpa",
+  "title": "Request Methods",
+  "severity": "warning",
+  "summary": "Businesses must provide two or more designated methods for consumers to submit requests, including at minimum a toll-free telephone number and website address.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": [
+      "toll-free number",
+      "request methods",
+      "privacy request form"
+    ]
+  },
+  "remediation": {
+    "guidance": "Provide toll-free number and website form for privacy requests.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "Cal. Civ. Code § 1798.130(a)",
+    "source_url": "https://oag.ca.gov/privacy/ccpa",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["structural"],
+    "jurisdiction": ["US-CA"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

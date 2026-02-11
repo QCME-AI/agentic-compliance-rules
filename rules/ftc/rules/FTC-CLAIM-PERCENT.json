@@ -1,0 +1,48 @@
+{
+  "id": "FTC-CLAIM-PERCENT",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Specific Percentage Efficacy Claims",
+  "severity": "warning",
+  "summary": "Specific percentage claims (e.g., \"90% effective\", \"reduces wrinkles by 50%\") require supporting evidence.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "\\d{2,3}%\\s*(effective|reduction|improvement|increase|decrease)",
+      "(reduces?|improves?|increases?)\\s+(by\\s+)?\\d{2,3}%",
+      "\\d+\\s*out\\s*of\\s*\\d+\\s*(people|users?|customers?)"
+    ],
+    "keywords": [
+      "percent effective",
+      "reduction",
+      "improvement",
+      "efficacy"
+    ]
+  },
+  "remediation": {
+    "guidance": "Substantiate percentage claims with studies or testing. Include methodology and conditions.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "FTC-251-1-free-genuine",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "\"Free\" Must Be Genuinely Free",
+  "severity": "critical",
+  "summary": "The word \"Free\" may only be used when the consumer pays nothing for the item and is not required to purchase anything else at an inflated price.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "\\bfree\\b",
+      "at\\s+no\\s+(additional\\s+)?cost",
+      "complimentary",
+      "gift\\s+with\\s+purchase"
+    ],
+    "keywords": [
+      "free",
+      "no cost",
+      "complimentary",
+      "gift"
+    ]
+  },
+  "remediation": {
+    "guidance": "Only use \"FREE\" when the item is truly free with no hidden costs or inflated companion purchase requirements.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 251.1(a)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-251#251.1",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "pricing"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

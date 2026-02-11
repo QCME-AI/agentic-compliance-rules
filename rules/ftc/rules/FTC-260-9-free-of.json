@@ -1,0 +1,48 @@
+{
+  "id": "FTC-260-9-free-of",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Free-Of Environmental Claims",
+  "severity": "warning",
+  "summary": "Free-of claims must be truthful and should not be made if the substance was never present or associated with the product category.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "free\\s+of\\s+[a-z]+",
+      "[a-z]+-free\\b",
+      "contains?\\s+no\\s+[a-z]+"
+    ],
+    "keywords": [
+      "free of",
+      "free",
+      "contains no",
+      "without"
+    ]
+  },
+  "remediation": {
+    "guidance": "Only claim \"free of X\" if (1) X is typically present in similar products, and (2) absence provides environmental benefit.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 260.9",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-260#260.9",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

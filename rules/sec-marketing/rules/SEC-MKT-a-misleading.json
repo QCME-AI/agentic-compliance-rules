@@ -1,0 +1,32 @@
+{
+  "id": "SEC-MKT-a-misleading",
+  "version": "1.0.0",
+  "framework": "sec-marketing",
+  "title": "No Misleading Implications",
+  "severity": "critical",
+  "summary": "Advertisement must not include statements that would be otherwise misleading or deceptive by implication",
+  "rationale": "",
+  "detection": {
+    "type": "ai-only",
+    "patterns": [],
+    "keywords": ["misleading", "implication", "deceptive"]
+  },
+  "remediation": {
+    "guidance": "Review all statements for potential misleading implications even if technically true.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 275.206(4)-1(a)(3)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206-4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

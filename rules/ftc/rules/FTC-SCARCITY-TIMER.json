@@ -1,0 +1,50 @@
+{
+  "id": "FTC-SCARCITY-TIMER",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Fake Countdown Timers",
+  "severity": "critical",
+  "summary": "Countdown timers that reset, extend, or do not reflect real deadlines are deceptive.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "\\d+:\\d+:\\d+\\s*(remaining|left)",
+      "offer\\s+expires?\\s+in",
+      "deal\\s+ends?\\s+in",
+      "hurry.*\\d+\\s*(hours?|minutes?|seconds?)\\s*(left|remaining)"
+    ],
+    "keywords": [
+      "countdown",
+      "time left",
+      "expires in",
+      "hours remaining",
+      "deal ends"
+    ]
+  },
+  "remediation": {
+    "guidance": "Remove countdown timers unless they reflect genuine time-limited offers. Do not reset timers.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/news-events/blogs/business-blog",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "HIPAA-web-tracking",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Tracking Technology on Health Pages",
+  "severity": "critical",
+  "summary": "Third-party tracking pixels on pages with PHI may constitute unauthorized disclosure.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "facebook.*pixel",
+      "google.*analytics",
+      "tracking.*health"
+    ],
+    "keywords": [
+      "tracking",
+      "pixel",
+      "analytics",
+      "third-party"
+    ]
+  },
+  "remediation": {
+    "guidance": "Remove or limit third-party trackers on pages collecting or displaying health information.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.502",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure",
+      "health-data"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

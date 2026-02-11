@@ -1,0 +1,32 @@
+{
+  "id": "SEC-482-b-gross-net",
+  "version": "1.0.0",
+  "framework": "sec-482",
+  "title": "Gross vs Net Performance",
+  "severity": "warning",
+  "summary": "When showing gross performance, investment company advertisements must also show net-of-fee performance to avoid misleading investors.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["gross", "net", "after fees", "before fees"]
+  },
+  "remediation": {
+    "guidance": "Show net-of-fee performance alongside any gross performance figures.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 230.482(b)(3)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-230/section-230.482",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["performance", "disclosure"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

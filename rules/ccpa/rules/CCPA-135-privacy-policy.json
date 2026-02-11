@@ -1,0 +1,40 @@
+{
+  "id": "CCPA-135-privacy-policy",
+  "version": "1.0.0",
+  "framework": "ccpa",
+  "title": "Privacy Policy Requirements",
+  "severity": "warning",
+  "summary": "Businesses must update their privacy policy at least once every 12 months and include CCPA-required disclosures.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "privacy\\s+policy",
+      "california\\s+privacy\\s+rights"
+    ],
+    "keywords": [
+      "privacy policy",
+      "annual update",
+      "consumer rights",
+      "CCPA rights"
+    ]
+  },
+  "remediation": {
+    "guidance": "Update privacy policy annually with CCPA-required disclosures.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "Cal. Civ. Code § 1798.135(a)(2)",
+    "source_url": "https://oag.ca.gov/privacy/ccpa",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure"],
+    "jurisdiction": ["US-CA"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

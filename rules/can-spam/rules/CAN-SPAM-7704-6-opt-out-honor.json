@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-7704-6-opt-out-honor",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "Honor Opt-Out Requests",
+  "severity": "critical",
+  "summary": "Opt-out requests must be honored within 10 business days. Cannot send commercial email after opt-out request is received.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["10 business days", "honor opt-out", "opt-out processing", "unsubscribe within"]
+  },
+  "remediation": {
+    "guidance": "Process opt-out requests within 10 business days. Once a recipient opts out, stop sending them commercial email. The opt-out mechanism must remain functional for at least 30 days.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "15 USC 7704(a)(4)(A)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["consent", "opt-out", "structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

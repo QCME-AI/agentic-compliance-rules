@@ -1,0 +1,51 @@
+{
+  "id": "FTC-NEGATIVE-OPTION",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Negative Option / Subscription Trap",
+  "severity": "critical",
+  "summary": "Subscription services must clearly disclose terms and obtain express informed consent before charging. Silence cannot equal consent.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(subscription|membership|plan)\\s+will\\s+(auto|automatically)",
+      "continue.*\\s+until.*cancel",
+      "(auto[\\s-]?renew|recurring)",
+      "billed\\s+(monthly|annually|weekly)"
+    ],
+    "keywords": [
+      "auto-renew",
+      "recurring charge",
+      "subscription",
+      "membership",
+      "billed automatically"
+    ]
+  },
+  "remediation": {
+    "guidance": "Before charging, clearly disclose: (1) Total cost, (2) Recurring nature, (3) Cancellation method. Require checkbox consent.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "ROSCA / FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/legal-library/browse/rules/negative-option-rule",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure",
+      "consent"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

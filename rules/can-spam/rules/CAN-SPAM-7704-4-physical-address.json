@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-7704-4-physical-address",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "Physical Postal Address",
+  "severity": "critical",
+  "summary": "Commercial email must include a valid physical postal address of the sender.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": ["\\d+\\s+[A-Z][a-z]+\\s+(St|Ave|Blvd|Rd|Dr|Ln|Way|Ct)", "P\\.?O\\.?\\s+Box\\s+\\d+", "Suite\\s+\\d+"],
+    "keywords": ["physical address", "mailing address", "postal address", "P.O. Box"]
+  },
+  "remediation": {
+    "guidance": "Include a valid physical postal address in every commercial email. This can be a street address, P.O. Box, or private mailbox registered with a commercial mail receiving agency.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "15 USC 7704(a)(5)(A)(iii)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure", "identity"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

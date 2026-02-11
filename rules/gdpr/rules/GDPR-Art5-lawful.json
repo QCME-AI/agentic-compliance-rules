@@ -1,0 +1,43 @@
+{
+  "id": "GDPR-Art5-lawful",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Lawful, Fair, and Transparent Processing",
+  "severity": "critical",
+  "summary": "Personal data must be processed lawfully, fairly and in a transparent manner.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "lawful",
+      "fair",
+      "transparent"
+    ]
+  },
+  "remediation": {
+    "guidance": "Ensure clear legal basis for processing and transparent communication.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.5(1)(a)",
+    "source_url": "https://gdpr.eu/article-5-how-to-process-personal-data/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "general",
+      "structural"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "CCPA-100-disclosure",
+  "version": "1.0.0",
+  "framework": "ccpa",
+  "title": "Pre-Collection Disclosure",
+  "severity": "critical",
+  "summary": "Businesses must provide notice at or before the point of collection of personal information.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(at|before)\\s+(the\\s+)?point\\s+of\\s+collection",
+      "notice\\s+at\\s+collection"
+    ],
+    "keywords": [
+      "at or before collection",
+      "categories collected",
+      "notice at collection"
+    ]
+  },
+  "remediation": {
+    "guidance": "Provide notice at point of collection listing categories and purposes.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "Cal. Civ. Code § 1798.100(b)",
+    "source_url": "https://oag.ca.gov/privacy/ccpa",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure"],
+    "jurisdiction": ["US-CA"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

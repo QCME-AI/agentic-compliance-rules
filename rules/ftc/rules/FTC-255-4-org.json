@@ -1,0 +1,48 @@
+{
+  "id": "FTC-255-4-org",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Organization Endorsement Standards",
+  "severity": "warning",
+  "summary": "Organization endorsements must represent the collective judgment of the organization, not just individual members.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(approved|endorsed)\\s+by\\s+[A-Z]",
+      "association\\s+(approved|endorsed)",
+      "seal\\s+of\\s+approval"
+    ],
+    "keywords": [
+      "approved by",
+      "endorsed by",
+      "seal of approval",
+      "certified by"
+    ]
+  },
+  "remediation": {
+    "guidance": "Ensure organization endorsements follow proper approval processes and reflect collective judgment.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 255.4",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-255#255.4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "endorsement"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

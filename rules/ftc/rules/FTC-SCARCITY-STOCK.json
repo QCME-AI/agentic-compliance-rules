@@ -1,0 +1,51 @@
+{
+  "id": "FTC-SCARCITY-STOCK",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "False Low Stock Claims",
+  "severity": "critical",
+  "summary": "Claims like \"Only X left!\" or \"Low stock\" that are false or manipulated to create urgency are deceptive.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "only\\s+\\d+\\s+(left|remaining|in\\s+stock)",
+      "just\\s+\\d+\\s+(left|remaining)",
+      "(low|limited)\\s+stock",
+      "selling\\s+(out|fast)",
+      "almost\\s+(gone|sold\\s+out)"
+    ],
+    "keywords": [
+      "only left",
+      "low stock",
+      "limited quantity",
+      "selling fast",
+      "almost gone"
+    ]
+  },
+  "remediation": {
+    "guidance": "Only display stock counts that reflect actual inventory. Remove if counts are fabricated or artificially limited.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

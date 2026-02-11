@@ -1,0 +1,50 @@
+{
+  "id": "FTC-NATIVE-DISCLOSURE",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Missing Advertisement Label",
+  "severity": "warning",
+  "summary": "Native ads must include clear and prominent disclosure that identifies them as advertising.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(paid|promoted|sponsored)\\s+(post|placement)",
+      "#?ad\\b",
+      "#?sponsored",
+      "advertisement"
+    ],
+    "keywords": [
+      "ad",
+      "advertisement",
+      "sponsored",
+      "promoted",
+      "paid placement"
+    ]
+  },
+  "remediation": {
+    "guidance": "Add clear \"Ad\" or \"Advertisement\" label in a prominent location using contrasting text.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5 / Native Advertising Guide",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

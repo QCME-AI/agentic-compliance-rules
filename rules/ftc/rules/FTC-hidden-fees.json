@@ -1,0 +1,49 @@
+{
+  "id": "FTC-hidden-fees",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Hidden Fee Disclosure",
+  "severity": "critical",
+  "summary": "All material fees must be clearly disclosed upfront, not hidden.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "\\$\\d+.*\\*",
+      "plus.*fees?",
+      "additional.*charges?"
+    ],
+    "keywords": [
+      "fees",
+      "charges",
+      "hidden",
+      "surprise"
+    ]
+  },
+  "remediation": {
+    "guidance": "Disclose all fees prominently before purchase. No surprise charges.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/advertising-marketing/pricing",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure",
+      "pricing"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

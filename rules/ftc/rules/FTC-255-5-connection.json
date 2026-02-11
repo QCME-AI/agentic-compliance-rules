@@ -1,0 +1,49 @@
+{
+  "id": "FTC-255-5-connection",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Material Connection Disclosure",
+  "severity": "critical",
+  "summary": "Material connections between endorsers and advertisers must be clearly disclosed.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "#ad\\b",
+      "#sponsored",
+      "#partner",
+      "paid\\s+partnership"
+    ],
+    "keywords": [
+      "material connection",
+      "sponsored",
+      "paid",
+      "affiliate"
+    ]
+  },
+  "remediation": {
+    "guidance": "Disclose any payment, free products, employment, or business relationship.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "255.5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

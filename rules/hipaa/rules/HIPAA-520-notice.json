@@ -1,0 +1,48 @@
+{
+  "id": "HIPAA-520-notice",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Notice of Privacy Practices Required",
+  "severity": "critical",
+  "summary": "Covered entities must provide a Notice of Privacy Practices describing how PHI may be used.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "privacy\\s+notice",
+      "notice\\s+of\\s+privacy\\s+practices",
+      "NPP"
+    ],
+    "keywords": [
+      "notice of privacy practices",
+      "NPP",
+      "privacy notice"
+    ]
+  },
+  "remediation": {
+    "guidance": "Display Notice of Privacy Practices prominently and provide copy to patients.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.520(a)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "privacy",
+      "health-data"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

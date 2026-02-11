@@ -1,0 +1,46 @@
+{
+  "id": "GDPR-Art9-special-categories",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Special Categories of Data",
+  "severity": "critical",
+  "summary": "Processing of special category data (health, biometric, genetic, racial/ethnic origin, political opinions, religious beliefs, sexual orientation) requires explicit consent.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "(health|medical|biometric|genetic)\\s+(data|information)",
+      "(racial|ethnic)\\s+origin",
+      "political\\s+opinion",
+      "religious\\s+belief",
+      "sexual\\s+orientation",
+      "trade\\s+union\\s+membership"
+    ],
+    "keywords": [
+      "special category data",
+      "sensitive personal data",
+      "health data",
+      "biometric data",
+      "genetic data",
+      "explicit consent"
+    ]
+  },
+  "remediation": {
+    "guidance": "Obtain explicit consent before processing special category data. Clearly disclose what special categories are processed and why.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.9",
+    "source_url": "https://gdpr.eu/article-9-processing-special-categories-of-personal-data-prohibited/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": ["consent", "disclosure"],
+    "jurisdiction": ["EU"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,39 @@
+{
+  "id": "COPPA-312-safe-harbor",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "Safe Harbor Programs",
+  "severity": "info",
+  "summary": "Operators may participate in FTC-approved self-regulatory safe harbor programs as an alternative to individual FTC enforcement.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": [
+      "safe harbor",
+      "CARU",
+      "kidSAFE",
+      "PRIVO",
+      "iKeepSafe",
+      "self-regulatory program"
+    ]
+  },
+  "remediation": {
+    "guidance": "Consider joining an FTC-approved COPPA safe harbor program (CARU, kidSAFE, PRIVO, iKeepSafe) for additional compliance support.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.11",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

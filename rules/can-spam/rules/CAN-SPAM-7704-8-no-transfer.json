@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-7704-8-no-transfer",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "No Selling Opt-Out Lists",
+  "severity": "critical",
+  "summary": "Cannot sell, transfer, or share email addresses of recipients who have opted out.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["do not share opt-out", "opt-out list", "suppression list", "do not sell email addresses"]
+  },
+  "remediation": {
+    "guidance": "Never sell, lease, exchange, or otherwise transfer the email addresses of people who have opted out of your messages.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "15 USC 7704(a)(4)(B)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["consent", "structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

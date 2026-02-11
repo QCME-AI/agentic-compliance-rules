@@ -1,0 +1,43 @@
+{
+  "id": "HIPAA-502-minimum",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Minimum Necessary Standard",
+  "severity": "critical",
+  "summary": "Covered entities must make reasonable efforts to limit PHI to the minimum necessary to accomplish the intended purpose.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "minimum necessary",
+      "PHI",
+      "limit disclosure"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement policies to limit PHI access and disclosure to minimum necessary.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.502(b)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "health-data",
+      "structural"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "id": "HIPAA-312-encryption",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "ePHI Encryption",
+  "severity": "critical",
+  "summary": "Electronic PHI must be encrypted when transmitted over networks.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "http://"
+    ],
+    "keywords": [
+      "encryption",
+      "HTTPS",
+      "TLS",
+      "secure transmission"
+    ]
+  },
+  "remediation": {
+    "guidance": "Use TLS/HTTPS for all ePHI transmission. Encrypt data at rest.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.312(a)(2)(iv)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/security/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "health-data"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

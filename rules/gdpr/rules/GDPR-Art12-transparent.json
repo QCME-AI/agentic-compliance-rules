@@ -1,0 +1,47 @@
+{
+  "id": "GDPR-Art12-transparent",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Transparent Information",
+  "severity": "warning",
+  "summary": "Information about data processing must be provided in a concise, transparent, intelligible form using clear and plain language.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "privacy\\s+(policy|notice|statement)",
+      "how\\s+we\\s+(use|collect|process)\\s+(your\\s+)?data"
+    ],
+    "keywords": [
+      "privacy policy",
+      "privacy notice",
+      "data processing notice",
+      "privacy statement"
+    ]
+  },
+  "remediation": {
+    "guidance": "Use clear, simple language in privacy notices. Avoid legal jargon.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.12(1)",
+    "source_url": "https://gdpr.eu/article-12-how-controllers-should-provide-personal-data-transparently/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

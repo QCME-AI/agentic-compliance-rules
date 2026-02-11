@@ -1,0 +1,44 @@
+{
+  "id": "GDPR-Art13-complaint-right",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Right to Lodge Complaint",
+  "severity": "warning",
+  "summary": "Must inform data subjects of their right to lodge a complaint with a supervisory authority.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "supervisory\\s+authority",
+      "data\\s+protection\\s+authority",
+      "lodge\\s+a\\s+complaint",
+      "file\\s+a\\s+complaint.*DPA"
+    ],
+    "keywords": [
+      "supervisory authority",
+      "data protection authority",
+      "lodge a complaint",
+      "DPA",
+      "ICO",
+      "CNIL"
+    ]
+  },
+  "remediation": {
+    "guidance": "Inform data subjects of their right to complain to a supervisory authority and provide contact details.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.13(2)(d)",
+    "source_url": "https://gdpr.eu/article-13-personal-data-collected/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": ["disclosure", "data-rights"],
+    "jurisdiction": ["EU"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

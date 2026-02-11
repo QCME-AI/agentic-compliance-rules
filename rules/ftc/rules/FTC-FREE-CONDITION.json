@@ -1,0 +1,50 @@
+{
+  "id": "FTC-FREE-CONDITION",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Hidden Conditions for \"Free\" Products",
+  "severity": "critical",
+  "summary": "Offers of \"free\" products with hidden conditions (shipping, subscription, purchase requirement) must clearly disclose all terms.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "free\\s*[!\\*]",
+      "free.*\\$\\d+\\s+(shipping|s&h|handling)",
+      "free.*with\\s+(purchase|subscription|order)",
+      "\\$0(\\.00)?.*\\$\\d+\\.\\d+\\s+shipping"
+    ],
+    "keywords": [
+      "free",
+      "no cost",
+      "complimentary",
+      "shipping fee",
+      "handling charge"
+    ]
+  },
+  "remediation": {
+    "guidance": "Disclose all conditions for \"free\" offers prominently and before checkout. E.g., \"Free with $50 purchase\" not just \"FREE\".",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 251",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-251",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

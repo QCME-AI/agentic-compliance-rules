@@ -1,0 +1,50 @@
+{
+  "id": "FTC-NATIVE-EDITORIAL",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Sponsored Content Disguised as Editorial",
+  "severity": "critical",
+  "summary": "Paid content that mimics editorial content must be clearly identified as advertising.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "sponsored\\s+(content|post|article)",
+      "partner\\s+content",
+      "presented\\s+by",
+      "brought\\s+to\\s+you\\s+by",
+      "in\\s+partnership\\s+with"
+    ],
+    "keywords": [
+      "sponsored content",
+      "partner content",
+      "presented by",
+      "brought to you by"
+    ]
+  },
+  "remediation": {
+    "guidance": "Clearly label sponsored content with \"Advertisement\", \"Sponsored\", or \"Paid Content\" in prominent placement.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5 / Native Advertising Guide",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/native-advertising-guide-businesses",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

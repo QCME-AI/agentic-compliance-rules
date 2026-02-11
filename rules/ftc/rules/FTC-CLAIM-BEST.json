@@ -1,0 +1,50 @@
+{
+  "id": "FTC-CLAIM-BEST",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Superlative Claims Without Basis",
+  "severity": "warning",
+  "summary": "Claims like \"best\", \"#1\", \"leading\", or \"top-rated\" require substantiation through comparative testing or market data.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "#\\s*1\\s+(selling|rated|brand|choice|recommended)",
+      "(best|top|leading|premier)\\s+(selling|rated|quality)",
+      "(america|world)'?s?\\s+(best|#\\s*1|favorite|leading)",
+      "award[\\s-]?winning"
+    ],
+    "keywords": [
+      "best",
+      "number one",
+      "top rated",
+      "leading brand",
+      "award winning"
+    ]
+  },
+  "remediation": {
+    "guidance": "Remove unsubstantiated superlative claims or provide evidence (market share data, comparative tests, awards).",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

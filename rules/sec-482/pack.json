@@ -1,0 +1,23 @@
+{
+  "pack_id": "sec-482",
+  "pack_version": "0.1.0",
+  "framework": "sec-482",
+  "description": "SEC Rule 482 - Investment Company Advertising rules covering performance data, fee disclosures, risk statements, and prospectus requirements",
+  "rule_ids": [
+    "SEC-482-a-general",
+    "SEC-482-a-prospectus",
+    "SEC-482-b-standardized",
+    "SEC-482-b-periods",
+    "SEC-482-b-current-quarter",
+    "SEC-482-b-gross-net",
+    "SEC-482-c-expense-ratio",
+    "SEC-482-c-sales-loads",
+    "SEC-482-d-tax",
+    "SEC-482-e-principal-risk",
+    "SEC-482-e-no-fdic",
+    "SEC-482-f-annual-returns",
+    "SEC-482-f-benchmark",
+    "SEC-482-g-current",
+    "SEC-482-past-performance"
+  ]
+}

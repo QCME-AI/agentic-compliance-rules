@@ -1,0 +1,48 @@
+{
+  "id": "GDPR-Art13-identity",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Controller Identity Disclosure",
+  "severity": "critical",
+  "summary": "At data collection, must disclose identity and contact details of the controller.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "data\\s+controller",
+      "controller\\s+is",
+      "data\\s+protection\\s+officer"
+    ],
+    "keywords": [
+      "data controller",
+      "data protection officer",
+      "DPO",
+      "controller identity"
+    ]
+  },
+  "remediation": {
+    "guidance": "Include company name, address, and contact information in privacy notice.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.13(1)(a)",
+    "source_url": "https://gdpr.eu/article-13-personal-data-collected/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

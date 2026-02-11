@@ -1,0 +1,43 @@
+{
+  "id": "HIPAA-508-required",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Authorization Required for Marketing",
+  "severity": "critical",
+  "summary": "Written authorization is required before using PHI for marketing communications.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "authorization",
+      "written consent",
+      "marketing"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement authorization forms that meet HIPAA requirements for marketing.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.508(a)(3)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "health-data",
+      "structural"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

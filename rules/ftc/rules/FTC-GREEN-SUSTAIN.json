@@ -1,0 +1,36 @@
+{
+  "id": "FTC-GREEN-SUSTAIN",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Vague Sustainable Claims",
+  "severity": "info",
+  "summary": "Broad claims like \"sustainable\" should be qualified with specific, substantiated environmental benefits.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "\\bsustainable\\b",
+      "sustainably\\s+(sourced|made|produced)",
+      "sustainability\\s+(certified|focused)"
+    ],
+    "keywords": ["sustainable", "sustainably sourced", "sustainability"]
+  },
+  "remediation": {
+    "guidance": "Replace vague sustainability claims with specific achievements (e.g., \"Made with 100% renewable energy\").",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 260.4",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-260",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["green-claims", "sustainability", "environmental"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

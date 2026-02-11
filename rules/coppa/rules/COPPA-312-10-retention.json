@@ -1,0 +1,40 @@
+{
+  "id": "COPPA-312-10-retention",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "Data Retention Limits",
+  "severity": "warning",
+  "summary": "Must retain children's personal information only as long as reasonably necessary to fulfill the purpose for which it was collected.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "retain.*child.*data\\s+(for|until|only)",
+      "delet(e|ion).*child.*after"
+    ],
+    "keywords": [
+      "data retention for children",
+      "retention limits",
+      "delete children's data",
+      "retention period"
+    ]
+  },
+  "remediation": {
+    "guidance": "Delete children's personal information once it is no longer reasonably necessary. Do not retain it indefinitely.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.10",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["data-retention"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

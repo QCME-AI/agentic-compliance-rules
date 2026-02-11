@@ -1,0 +1,40 @@
+{
+  "id": "GDPR-Art13-legitimate-interest",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Legitimate Interest Disclosure",
+  "severity": "warning",
+  "summary": "When processing is based on legitimate interests, the specific interests must be identified and disclosed.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "legitimate\\s+interest(s)?\\s+(pursued|of|include|such as)",
+      "our\\s+legitimate\\s+interest\\s+is"
+    ],
+    "keywords": [
+      "legitimate interest",
+      "legitimate interests pursued",
+      "business interest",
+      "legitimate basis"
+    ]
+  },
+  "remediation": {
+    "guidance": "When relying on legitimate interests as a legal basis, specify the actual interests pursued. Generic statements like 'our legitimate interests' are insufficient.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.13(1)(d)",
+    "source_url": "https://gdpr.eu/article-13-personal-data-collected/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": ["disclosure"],
+    "jurisdiction": ["EU"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

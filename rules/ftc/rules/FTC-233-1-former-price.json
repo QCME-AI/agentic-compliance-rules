@@ -1,0 +1,49 @@
+{
+  "id": "FTC-233-1-former-price",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Former Price Comparisons",
+  "severity": "critical",
+  "summary": "Price comparisons to a \"former price\" must be based on actual prices at which the item was offered in good faith for a reasonably substantial period.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "was\\s+\\$\\d+",
+      "formerly\\s+\\$\\d+",
+      "regular\\s+price\\s+\\$\\d+",
+      "compare\\s+at\\s+\\$\\d+"
+    ],
+    "keywords": [
+      "was",
+      "formerly",
+      "regular price",
+      "compare at"
+    ]
+  },
+  "remediation": {
+    "guidance": "Only show \"was $X\" prices that reflect genuine prior pricing. Maintain records of historical pricing.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 233.1",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233#233.1",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "pricing"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

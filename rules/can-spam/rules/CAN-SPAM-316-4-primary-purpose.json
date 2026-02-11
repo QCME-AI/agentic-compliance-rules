@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-316-4-primary-purpose",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "Primary Purpose Test",
+  "severity": "warning",
+  "summary": "If an email contains both transactional and commercial content, the primary purpose determines whether CAN-SPAM applies. Commercial content in subject line makes it commercial.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["primary purpose", "commercial content", "transactional content", "dual purpose email"]
+  },
+  "remediation": {
+    "guidance": "When mixing transactional and commercial content, the primary purpose determines classification. If the subject line or opening content is commercial, the entire message is commercial under CAN-SPAM.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 316.3(a)(2)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["classification"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

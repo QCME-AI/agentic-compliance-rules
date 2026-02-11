@@ -1,0 +1,49 @@
+{
+  "id": "GDPR-transfer",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "International Data Transfer Disclosure",
+  "severity": "warning",
+  "summary": "Must disclose intention to transfer data to third countries and safeguards in place.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "transfer(red|ring)?\\s+(to|outside)\\s+(a\\s+)?third\\s+countr",
+      "transfer.*outside\\s+(the\\s+)?(EU|EEA|European)"
+    ],
+    "keywords": [
+      "international transfer",
+      "transfer outside",
+      "third country",
+      "adequacy decision",
+      "standard contractual clauses"
+    ]
+  },
+  "remediation": {
+    "guidance": "Disclose international transfers in privacy policy with legal mechanisms used.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.13(1)(f)",
+    "source_url": "https://gdpr.eu/international-data-transfer-rules/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "disclosure",
+      "data-transfer"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

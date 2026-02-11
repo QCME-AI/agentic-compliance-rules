@@ -1,0 +1,43 @@
+{
+  "id": "HIPAA-530-training",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Workforce Training",
+  "severity": "warning",
+  "summary": "Covered entities must train workforce members on privacy policies and procedures.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "training",
+      "workforce",
+      "education"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement regular HIPAA training and document completion.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.530(b)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "privacy",
+      "structural"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

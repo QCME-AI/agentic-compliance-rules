@@ -1,0 +1,47 @@
+{
+  "id": "FTC-260-16-materials",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Renewable Materials Claims",
+  "severity": "info",
+  "summary": "Renewable materials claims should not be deceptive about the overall environmental benefit.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "renewable\\s+materials?",
+      "plant[\\s-]?based",
+      "bio[\\s-]?based"
+    ],
+    "keywords": [
+      "renewable materials",
+      "plant-based",
+      "bio-based"
+    ]
+  },
+  "remediation": {
+    "guidance": "Specify what percentage of materials are from renewable sources. Identify the renewable materials.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 260.16",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-260#260.16",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

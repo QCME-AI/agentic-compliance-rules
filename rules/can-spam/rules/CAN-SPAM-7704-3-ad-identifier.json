@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-7704-3-ad-identifier",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "Advertisement Identification",
+  "severity": "warning",
+  "summary": "Commercial email must be clearly and conspicuously identified as an advertisement or solicitation.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": ["(this\\s+(is\\s+)?(an?\\s+)?)?advertis(ement|ing)", "commercial\\s+(message|email)", "promotional\\s+(message|email|offer)"],
+    "keywords": ["advertisement", "this is an ad", "commercial message", "promotional email", "solicitation"]
+  },
+  "remediation": {
+    "guidance": "Include clear identification that the message is a commercial advertisement or solicitation, unless the recipient has given prior affirmative consent.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "15 USC 7704(a)(5)(A)(i)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

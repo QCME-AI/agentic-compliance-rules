@@ -1,0 +1,51 @@
+{
+  "id": "FTC-SCARCITY-EXCLUSIVE",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "False Exclusivity Claims",
+  "severity": "warning",
+  "summary": "Claims of exclusivity (\"exclusive offer\", \"invitation only\") that are not genuine are deceptive.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "exclusive\\s+(offer|deal|discount|access)",
+      "invitation\\s+only",
+      "(vip|member)\\s+exclusive",
+      "specially?\\s+selected",
+      "chosen\\s+(few|customers?)"
+    ],
+    "keywords": [
+      "exclusive offer",
+      "invitation only",
+      "VIP access",
+      "members only",
+      "special selection"
+    ]
+  },
+  "remediation": {
+    "guidance": "Remove false exclusivity claims. Only use \"exclusive\" for genuinely limited or member-only offers.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

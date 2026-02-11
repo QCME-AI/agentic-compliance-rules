@@ -1,0 +1,48 @@
+{
+  "id": "FTC-233-2-retail-value",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Comparable Value Claims",
+  "severity": "warning",
+  "summary": "Retail value or comparable value claims must accurately reflect the price at which comparable products are sold by others.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "retail\\s+value\\s+\\$\\d+",
+      "comparable\\s+value",
+      "compare\\s+to\\s+\\$\\d+"
+    ],
+    "keywords": [
+      "retail value",
+      "comparable value",
+      "compare to"
+    ]
+  },
+  "remediation": {
+    "guidance": "Verify comparable prices before using \"Retail Value\" or \"Compare at\" claims. Document competitive pricing.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 233.2",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233#233.2",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims",
+      "pricing"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

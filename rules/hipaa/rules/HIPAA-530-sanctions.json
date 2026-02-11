@@ -1,0 +1,43 @@
+{
+  "id": "HIPAA-530-sanctions",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Sanctions Policy",
+  "severity": "info",
+  "summary": "Covered entities must have sanctions against workforce members who violate privacy policies.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "sanctions",
+      "violations",
+      "discipline"
+    ]
+  },
+  "remediation": {
+    "guidance": "Document and enforce sanctions policy for privacy violations.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.530(e)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "privacy",
+      "structural"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "id": "GDPR-Art13-retention",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Retention Period Disclosure",
+  "severity": "warning",
+  "summary": "Must disclose how long personal data will be stored or criteria for determining retention.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "retain(ed)?\\s+(your|personal)\\s+data\\s+(for|until)",
+      "retention\\s+period",
+      "data\\s+(will\\s+be\\s+)?(stored|kept|retained)\\s+(for|until)"
+    ],
+    "keywords": [
+      "retention period",
+      "data retention",
+      "how long we keep",
+      "stored for"
+    ]
+  },
+  "remediation": {
+    "guidance": "Include data retention periods in privacy policy.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.13(2)(a)",
+    "source_url": "https://gdpr.eu/article-13-personal-data-collected/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

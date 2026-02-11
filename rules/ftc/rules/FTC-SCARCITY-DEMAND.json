@@ -1,0 +1,51 @@
+{
+  "id": "FTC-SCARCITY-DEMAND",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Fabricated High Demand Claims",
+  "severity": "warning",
+  "summary": "Claims like \"selling fast\" or \"X people viewing\" that are fabricated or manipulated are deceptive.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "\\d+\\s+people\\s+(viewing|watching|looking)",
+      "\\d+\\s+(sold|bought)\\s+in\\s+(last|past)",
+      "selling\\s+(fast|quickly)",
+      "(hot|popular|trending)\\s+(item|product)",
+      "in\\s+high\\s+demand"
+    ],
+    "keywords": [
+      "people viewing",
+      "sold today",
+      "trending",
+      "popular item",
+      "high demand"
+    ]
+  },
+  "remediation": {
+    "guidance": "Only display real-time data that is accurate. Remove if viewer counts or demand claims are fabricated.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/advertising-faqs",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

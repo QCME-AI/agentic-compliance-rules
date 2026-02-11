@@ -1,0 +1,42 @@
+{
+  "id": "HIPAA-524-access",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Individual Access Rights",
+  "severity": "warning",
+  "summary": "Individuals have the right to access and obtain copies of their PHI.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "access",
+      "copy",
+      "records request"
+    ]
+  },
+  "remediation": {
+    "guidance": "Implement process to handle access requests within 30 days.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.524(a)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "health-data"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

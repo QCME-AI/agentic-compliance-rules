@@ -1,0 +1,32 @@
+{
+  "id": "SEC-MKT-d-time-periods",
+  "version": "1.0.0",
+  "framework": "sec-marketing",
+  "title": "Performance Time Periods",
+  "severity": "critical",
+  "summary": "Must include standardized 1-year, 5-year, and 10-year (or since inception) returns",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["1-year", "5-year", "10-year", "time period"]
+  },
+  "remediation": {
+    "guidance": "Include standardized 1-year, 5-year, and 10-year (or since inception) returns.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 275.206(4)-1(d)(2)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206-4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["performance"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

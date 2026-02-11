@@ -1,0 +1,38 @@
+{
+  "id": "FTC-238-4-refusal",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "No Refusal to Sell Advertised Item",
+  "severity": "critical",
+  "summary": "Refusal to show, demonstrate, or sell the advertised product is evidence of bait advertising.",
+  "rationale": "",
+  "detection": {
+    "type": "ai-only"
+  },
+  "remediation": {
+    "guidance": "Train staff to actively sell advertised products. Do not create obstacles to purchasing advertised items.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 238.4",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-238#238.4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general",
+      "structural"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

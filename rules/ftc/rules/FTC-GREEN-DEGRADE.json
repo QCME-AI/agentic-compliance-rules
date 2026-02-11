@@ -1,0 +1,37 @@
+{
+  "id": "FTC-GREEN-DEGRADE",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Misleading Biodegradable Claims",
+  "severity": "warning",
+  "summary": "\"Biodegradable\" claims require evidence that the product completely breaks down within one year under normal disposal conditions.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "biodegradable",
+      "bio[\\s-]?degradable",
+      "breaks?\\s+down\\s+naturally",
+      "decomposes?\\s+(naturally|quickly)"
+    ],
+    "keywords": ["biodegradable", "compostable", "breaks down", "decomposes"]
+  },
+  "remediation": {
+    "guidance": "Substantiate biodegradable claims with testing. Specify timeframe and disposal conditions.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 260.8",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-260",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["green-claims", "biodegradable", "environmental"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

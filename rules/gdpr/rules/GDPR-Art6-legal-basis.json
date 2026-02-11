@@ -1,0 +1,44 @@
+{
+  "id": "GDPR-Art6-legal-basis",
+  "version": "1.0.0",
+  "framework": "gdpr",
+  "title": "Legal Basis Required",
+  "severity": "critical",
+  "summary": "Processing must have a valid legal basis: consent, contract, legal obligation, vital interests, public task, or legitimate interests.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "legal basis",
+      "consent",
+      "legitimate interest",
+      "contract"
+    ]
+  },
+  "remediation": {
+    "guidance": "Document and disclose the legal basis for each processing activity.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed_with_attribution",
+    "citation": "Art.6(1)",
+    "source_url": "https://gdpr.eu/article-6-how-to-process-personal-data-legally/",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": true
+  },
+  "metadata": {
+    "tags": [
+      "consent",
+      "structural"
+    ],
+    "jurisdiction": [
+      "EU"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

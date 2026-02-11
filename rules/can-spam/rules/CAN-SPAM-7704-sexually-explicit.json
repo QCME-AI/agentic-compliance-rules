@@ -1,0 +1,32 @@
+{
+  "id": "CAN-SPAM-7704-sexually-explicit",
+  "version": "1.0.0",
+  "framework": "can-spam",
+  "title": "Sexually Explicit Content",
+  "severity": "critical",
+  "summary": "Email with sexually explicit content must include 'SEXUALLY-EXPLICIT:' at the beginning of the subject line and specific initial viewable content requirements.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": ["SEXUALLY[\\s-]EXPLICIT"],
+    "keywords": ["sexually explicit", "adult content label", "SEXUALLY-EXPLICIT", "18+"]
+  },
+  "remediation": {
+    "guidance": "If sending email with sexually explicit content, include 'SEXUALLY-EXPLICIT:' at the beginning of the subject line and ensure no sexually explicit content appears in the initial viewable area.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "15 USC 7704(d), 16 CFR 316.4",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-316",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure", "content-label"],
+    "jurisdiction": ["US"],
+    "content_types": ["email", "marketing"],
+    "owner": "qcme-core"
+  }
+}

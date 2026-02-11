@@ -1,0 +1,1 @@
+Please enter your health information including diagnoses, prescriptions, and physician notes.

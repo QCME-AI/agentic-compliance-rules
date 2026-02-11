@@ -1,0 +1,47 @@
+{
+  "id": "HIPAA-502-permitted",
+  "version": "1.0.0",
+  "framework": "hipaa",
+  "title": "Permitted Uses and Disclosures",
+  "severity": "warning",
+  "summary": "PHI may only be used or disclosed as permitted or required by the Privacy Rule.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "permitted",
+      "disclosure",
+      "treatment",
+      "payment",
+      "operations"
+    ]
+  },
+  "remediation": {
+    "guidance": "Ensure all PHI uses and disclosures fall within permitted categories.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "164.502(a)",
+    "source_url": "https://www.hhs.gov/hipaa/for-professionals/privacy/guidance/index.html",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure",
+      "privacy",
+      "health-data",
+      "structural"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

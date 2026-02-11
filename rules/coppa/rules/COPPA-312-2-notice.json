@@ -1,0 +1,41 @@
+{
+  "id": "COPPA-312-2-notice",
+  "version": "1.0.0",
+  "framework": "coppa",
+  "title": "Notice on Website/App",
+  "severity": "critical",
+  "summary": "Operators of websites or online services directed to children under 13 must post a clear, prominent, and complete online privacy notice.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "children('s)?\\s+privacy",
+      "kids(')?\\s+privacy",
+      "coppa\\s+(compliance|notice|policy)"
+    ],
+    "keywords": [
+      "children's privacy policy",
+      "kids privacy",
+      "COPPA notice",
+      "privacy policy for children"
+    ]
+  },
+  "remediation": {
+    "guidance": "Post a clearly labeled, complete children's privacy notice linked from every page that collects information from children.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 312.2, 312.4(d)",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-C/part-312",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["disclosure", "privacy"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

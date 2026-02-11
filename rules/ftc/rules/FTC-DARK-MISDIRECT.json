@@ -1,0 +1,43 @@
+{
+  "id": "FTC-DARK-MISDIRECT",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Dark Pattern: Visual Misdirection",
+  "severity": "warning",
+  "summary": "Using visual tricks (fake X buttons, disguised ads, misleading buttons) to manipulate user choices is deceptive.",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "keywords": [
+      "fake button",
+      "close button",
+      "dismiss",
+      "misdirection"
+    ]
+  },
+  "remediation": {
+    "guidance": "Ensure all UI elements behave as expected. Close buttons should close, not redirect.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "FTC Act §5",
+    "source_url": "https://www.ftc.gov/business-guidance/news-events/news/press-releases/2022/09/ftc-report-shows-rise-sophisticated-dark-patterns-designed-trick",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "general"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

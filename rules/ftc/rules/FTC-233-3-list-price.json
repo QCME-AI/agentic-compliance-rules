@@ -1,0 +1,48 @@
+{
+  "id": "FTC-233-3-list-price",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Manufacturer List Price Claims",
+  "severity": "warning",
+  "summary": "Claims of savings from manufacturer's list price or suggested retail price must reflect prices at which products are actually sold.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "msrp\\s+\\$\\d+",
+      "list\\s+price\\s+\\$\\d+",
+      "suggested\\s+retail"
+    ],
+    "keywords": [
+      "MSRP",
+      "list price",
+      "suggested retail"
+    ]
+  },
+  "remediation": {
+    "guidance": "Only reference MSRP if products are actually sold at that price in the market.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 233.3",
+    "source_url": "https://www.ecfr.gov/current/title-16/chapter-I/subchapter-B/part-233#233.3",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "claims",
+      "pricing"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}

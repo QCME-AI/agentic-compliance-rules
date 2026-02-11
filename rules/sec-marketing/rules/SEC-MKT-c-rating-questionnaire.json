@@ -1,0 +1,32 @@
+{
+  "id": "SEC-MKT-c-rating-questionnaire",
+  "version": "1.0.0",
+  "framework": "sec-marketing",
+  "title": "Rating Questionnaire Disclosure",
+  "severity": "info",
+  "summary": "Must disclose if rating was based on self-reported questionnaire data",
+  "rationale": "",
+  "detection": {
+    "type": "keyword",
+    "patterns": [],
+    "keywords": ["questionnaire", "self-reported", "survey"]
+  },
+  "remediation": {
+    "guidance": "Disclose if rating was based on self-reported questionnaire data.",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "17 CFR 275.206(4)-1(c)(2)",
+    "source_url": "https://www.ecfr.gov/current/title-17/chapter-II/part-275/section-275.206-4",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": ["structural"],
+    "jurisdiction": ["US"],
+    "content_types": ["landing-page", "marketing"],
+    "owner": "qcme-core"
+  }
+}

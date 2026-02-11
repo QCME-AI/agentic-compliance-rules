@@ -1,0 +1,49 @@
+{
+  "id": "FTC-REVIEW-INCENTIVE",
+  "version": "1.0.0",
+  "framework": "ftc",
+  "title": "Incentivized Reviews Without Disclosure",
+  "severity": "critical",
+  "summary": "Offering discounts, free products, or other incentives for reviews without clear disclosure violates FTC guidelines.",
+  "rationale": "",
+  "detection": {
+    "type": "hybrid",
+    "patterns": [
+      "review\\s+for\\s+(discount|free|coupon)",
+      "leave\\s+a?\\s*review.*get\\s+(\\$|percent|%|off|discount)",
+      "(free|discount).*in\\s+exchange\\s+for.*review",
+      "write\\s+a?\\s*review.*receive"
+    ],
+    "keywords": [
+      "review discount",
+      "review reward",
+      "review incentive",
+      "free for review"
+    ]
+  },
+  "remediation": {
+    "guidance": "Clearly disclose when reviews are incentivized with labels like \"Incentivized Review\" or \"Received free product for review.\"",
+    "examples": []
+  },
+  "source": {
+    "source_type": "public_law",
+    "policy_status": "allowed",
+    "citation": "16 CFR 255.5",
+    "source_url": "https://www.ftc.gov/business-guidance/resources/ftcs-endorsement-guides-what-people-are-asking",
+    "retrieved_at": "2026-02-09",
+    "attribution_required": false
+  },
+  "metadata": {
+    "tags": [
+      "disclosure"
+    ],
+    "jurisdiction": [
+      "US"
+    ],
+    "content_types": [
+      "landing-page",
+      "marketing"
+    ],
+    "owner": "qcme-core"
+  }
+}
