@@ -43,8 +43,19 @@
     "hipaa",
     "ftc",
     "gdpr",
+    "ccpa",
+    "coppa",
+    "can-spam",
+    "sec",
     "marketing",
     "llm",
-    "ai-compliance"
-  ]
+    "ai-compliance",
+    "claude-code",
+    "mcp",
+    "rules-engine"
+  ],
+  "homepage": "https://github.com/QCME-AI/agentic-compliance-rules#readme",
+  "bugs": {
+    "url": "https://github.com/QCME-AI/agentic-compliance-rules/issues"
+  }
 }

@@ -7,12 +7,14 @@ on:
       - "rules/**"
       - "schemas/**"
       - "tools/**"
+      - "skills/**"
       - "package.json"
   pull_request:
     paths:
       - "rules/**"
       - "schemas/**"
       - "tools/**"
+      - "skills/**"
       - "package.json"
 
 jobs:

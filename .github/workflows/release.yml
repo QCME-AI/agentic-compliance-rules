@@ -10,6 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      packages: write
       id-token: write
     steps:
       - uses: actions/checkout@v4
@@ -18,13 +19,26 @@ jobs:
           node-version: 20
           registry-url: https://registry.npmjs.org
       - run: npm run ci
+
       - uses: softprops/action-gh-release@v2
         with:
           files: |
             dist/index.json
             dist/rules.min.json
           generate_release_notes: true
+
+      # Publish to npm with provenance attestation
       - name: Publish to npm
-        run: npm publish --access public
+        run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      # Publish to GitHub Packages (mirror)
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          registry-url: https://npm.pkg.github.com
+      - name: Publish to GitHub Packages
+        run: npm publish --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
