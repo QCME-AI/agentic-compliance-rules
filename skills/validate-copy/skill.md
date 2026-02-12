@@ -17,10 +17,11 @@ When invoked, follow these steps:
    - A URL to fetch and validate (use the WebFetch tool)
    - If no argument is provided, ask the user what content to validate
 
-2. **Load rules as context**: Read the rule files from this repo's `rules/` directory:
-   - If `--framework` is specified, load only that framework's rules from `rules/{framework}/rules/*.json`
-   - If not specified, determine which frameworks are relevant based on the content (e.g., health content → HIPAA, EU audience → GDPR, email → CAN-SPAM, investment → SEC, children → COPPA)
-   - Read each rule JSON to understand the regulatory requirement it represents
+2. **Load rules as context**: Read `dist/index.json` from this repo. If it does not exist, run `npm run build` first.
+   - If `--framework` is specified, filter to only rules where `rule.framework` matches
+   - If `--framework all` is specified, use all rules
+   - If not specified, determine which frameworks are relevant based on the content (e.g., health content → HIPAA, EU audience → GDPR, email → CAN-SPAM, investment → SEC, children → COPPA) and filter accordingly
+   - Use each rule's full definition (summary, remediation, source) as your compliance knowledge
 
 3. **Analyze content against rules**: Using the loaded rules as your compliance knowledge, evaluate the content:
    - For each rule, consider whether the content may violate the regulation described in the rule's `summary`, `title`, and `remediation.guidance`

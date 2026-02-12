@@ -1,0 +1,5 @@
+Sign up for our newsletter and get 15% off your first order! Just enter your name, email address, phone number, and shipping address below.
+
+Notice at Collection: We collect identifiers (name, email, phone), commercial information (purchase history), and internet activity (browsing data) to process orders, send marketing communications, and improve our services. View our full privacy policy at www.example.com/privacy.
+
+[Name] [Email] [Phone] [Address] [Sign Up]

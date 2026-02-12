@@ -30,8 +30,10 @@ function main() {
     return existsSync(join(ROOT, "rules", f, "pack.json"));
   });
 
+  const pkg = JSON.parse(readFileSync(join(ROOT, "package.json"), "utf8"));
+
   const index = {
-    version: "0.1.0",
+    version: pkg.version,
     generated_at: new Date().toISOString(),
     packs: [],
     rules: [],
