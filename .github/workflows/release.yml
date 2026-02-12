@@ -3,52 +3,45 @@ name: Release
 on:
   push:
     branches: [main]
-    paths:
-      - "package.json"
 
 jobs:
   release:
     runs-on: ubuntu-latest
+    if: "!contains(github.event.head_commit.message, 'chore: bump version')"
     permissions:
       contents: write
       packages: write
       id-token: write
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
-
-      - name: Check if version changed
-        id: version
-        run: |
-          NEW=$(node -p "require('./package.json').version")
-          OLD=$(git show HEAD~1:package.json | node -p "JSON.parse(require('fs').readFileSync('/dev/stdin','utf8')).version")
-          echo "new=$NEW" >> "$GITHUB_OUTPUT"
-          if [ "$NEW" != "$OLD" ]; then
-            echo "changed=true" >> "$GITHUB_OUTPUT"
-          else
-            echo "changed=false" >> "$GITHUB_OUTPUT"
-          fi
 
       - uses: actions/setup-node@v4
-        if: steps.version.outputs.changed == 'true'
         with:
           node-version: 20
           registry-url: https://registry.npmjs.org
 
       - name: Build and validate
-        if: steps.version.outputs.changed == 'true'
         run: npm run ci
 
+      - name: Bump patch version
+        id: version
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          npm version patch --no-git-tag-version
+          VERSION=$(node -p "require('./package.json').version")
+          echo "new=$VERSION" >> "$GITHUB_OUTPUT"
+          git add package.json
+          git commit -m "chore: bump version to $VERSION [skip ci]"
+          git push
+
       - name: Create git tag
-        if: steps.version.outputs.changed == 'true'
         continue-on-error: true
         run: |
           git tag "rules-v${{ steps.version.outputs.new }}"
           git push origin "rules-v${{ steps.version.outputs.new }}"
 
       - name: GitHub Release
-        if: steps.version.outputs.changed == 'true'
         continue-on-error: true
         uses: softprops/action-gh-release@v2
         with:
@@ -59,20 +52,17 @@ jobs:
           generate_release_notes: true
 
       - name: Publish to npm
-        if: steps.version.outputs.changed == 'true'
         continue-on-error: true
         run: npm publish --access public --provenance
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
       - uses: actions/setup-node@v4
-        if: steps.version.outputs.changed == 'true'
         with:
           node-version: 20
           registry-url: https://npm.pkg.github.com
 
       - name: Publish to GitHub Packages
-        if: steps.version.outputs.changed == 'true'
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
