@@ -1,0 +1,3 @@
+Welcome to FunKidsGames! Create your profile to start playing. Enter your name, age, and favorite game character.
+
+[Name] [Age] [Favorite Character] [Create Profile]

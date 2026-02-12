@@ -13,12 +13,20 @@
 
 ## Rule ID Convention
 
-Rule IDs must match `^[A-Z]+-[A-Za-z0-9-]+$`:
-- `FTC-ENDORSE-MATERIAL-001`
-- `HIPAA-PHI-FORM-001`
-- `GDPR-CONSENT-BANNER-001`
+Rule IDs must match `^[A-Z]+-[A-Za-z0-9-]+$`. Use the regulatory section number when possible:
+- `FTC-255-5-material-connection`
+- `HIPAA-520-notice`
+- `GDPR-Art7-consent-conditions`
+- `CAN-SPAM-7704-5-opt-out`
 
 Rule IDs are immutable after release. Never reuse a deprecated ID.
+
+## Tags
+
+Rules use tags for filtering. When adding a rule, apply the appropriate tags:
+
+- **`structural`** — Apply this tag to rules that describe organizational or procedural requirements (workforce training, internal audits, policies) rather than content requirements. Rules tagged `structural` are skipped when reviewing marketing copy because they cannot be assessed from content alone.
+- **`disclosure`**, **`consent`**, **`endorsement`**, **`dark-pattern`**, **`marketing`**, **`opt-out`**, **`notice`**, **`transparency`** — Content-related tags. Apply whichever are relevant.
 
 ## Licensing Requirements
 
