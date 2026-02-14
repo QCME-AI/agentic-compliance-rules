@@ -5,7 +5,7 @@
   "author": "qcme",
   "license": "Apache-2.0",
   "permissions": ["network"],
-  "entry": "SKILL.md",
+  "entry": "README.md",
   "tags": [
     "compliance",
     "regulatory",
