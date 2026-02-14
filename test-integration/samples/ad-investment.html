@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Apex Growth Fund — Investment Ad</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: 'Georgia', serif; background: #fafbfc; color: #1a1a2e; }
+  .top-bar { background: #1a1a2e; color: #c9a74e; padding: 10px 40px; font-size: 13px; display: flex; justify-content: space-between; }
+  .hero { background: linear-gradient(135deg, #1a1a2e 0%, #2d3561 100%); color: #fff; padding: 80px 60px; }
+  .hero h1 { font-size: 52px; margin-bottom: 10px; }
+  .hero h1 span { color: #c9a74e; }
+  .hero .tagline { font-size: 22px; color: #bbb; font-style: italic; margin-bottom: 40px; }
+  .performance { display: flex; gap: 0; margin-top: 30px; }
+  .performance .year { flex: 1; text-align: center; padding: 30px 20px; border-right: 1px solid rgba(255,255,255,0.1); }
+  .performance .year:last-child { border: none; }
+  .performance .year .label { font-size: 14px; color: #888; margin-bottom: 8px; }
+  .performance .year .value { font-size: 42px; font-weight: 700; color: #00cc66; }
+  .performance .year .value.avg { color: #c9a74e; }
+  .guarantees { padding: 50px 60px; background: #fff; }
+  .guarantees h2 { font-size: 32px; margin-bottom: 30px; color: #1a1a2e; }
+  .guarantees .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .guarantees .item { display: flex; align-items: flex-start; gap: 15px; padding: 20px; background: #f5f7fa; border-radius: 8px; }
+  .guarantees .item .icon { font-size: 28px; flex-shrink: 0; }
+  .guarantees .item h3 { font-size: 16px; margin-bottom: 5px; }
+  .guarantees .item p { font-size: 14px; color: #666; }
+  .quote { background: #1a1a2e; color: #fff; padding: 50px 80px; text-align: center; }
+  .quote blockquote { font-size: 24px; font-style: italic; margin-bottom: 15px; }
+  .quote cite { color: #c9a74e; font-size: 16px; }
+  .chart { padding: 50px 60px; background: #fff; text-align: center; }
+  .chart h2 { margin-bottom: 20px; }
+  .chart .bars { display: flex; align-items: flex-end; justify-content: center; gap: 30px; height: 200px; margin: 30px 0; }
+  .chart .bar { width: 80px; text-align: center; }
+  .chart .bar .fill { background: linear-gradient(180deg, #c9a74e, #8b6914); border-radius: 4px 4px 0 0; margin-bottom: 8px; }
+  .chart .bar .fill.sp { background: linear-gradient(180deg, #ccc, #999); }
+  .chart .bar .lbl { font-size: 12px; color: #666; }
+  .chart .bar .val { font-size: 14px; font-weight: 700; margin-bottom: 4px; }
+  .cta { background: linear-gradient(135deg, #c9a74e, #8b6914); padding: 50px; text-align: center; color: #fff; }
+  .cta h2 { font-size: 32px; margin-bottom: 10px; }
+  .cta p { font-size: 18px; margin-bottom: 30px; }
+  .cta button { background: #1a1a2e; color: #c9a74e; border: none; font-size: 18px; padding: 16px 50px; border-radius: 4px; cursor: pointer; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+  .footer { padding: 20px 60px; font-size: 11px; color: #999; background: #1a1a2e; }
+</style>
+</head>
+<body>
+
+<div class="top-bar">
+  <span>APEX GROWTH FUND</span>
+  <span>A Registered Investment Company</span>
+</div>
+
+<div class="hero">
+  <h1>APEX <span>GROWTH</span> FUND</h1>
+  <p class="tagline">Superior Returns. Proven Track Record. Guaranteed Growth.</p>
+  <div class="performance">
+    <div class="year">
+      <div class="label">2021 Return</div>
+      <div class="value">+65%</div>
+    </div>
+    <div class="year">
+      <div class="label">2022 Return</div>
+      <div class="value">+18%</div>
+    </div>
+    <div class="year">
+      <div class="label">2023 Return</div>
+      <div class="value">+42%</div>
+    </div>
+    <div class="year">
+      <div class="label">Avg. Annual</div>
+      <div class="value avg">41.7%</div>
+    </div>
+  </div>
+</div>
+
+<div class="guarantees">
+  <h2>Why Investors Choose Apex</h2>
+  <div class="grid">
+    <div class="item">
+      <div class="icon">🛡️</div>
+      <div>
+        <h3>Guaranteed Minimum 15% Annual Returns</h3>
+        <p>Our proprietary AI strategy ensures consistent returns regardless of market conditions.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="icon">📉</div>
+      <div>
+        <h3>Zero Risk of Loss</h3>
+        <p>Our AI-powered hedging eliminates all downside risk. Your principal is always protected.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="icon">💰</div>
+      <div>
+        <h3>No Fees, No Minimums</h3>
+        <p>Start investing with as little as $500. We don't charge management fees or loads.</p>
+      </div>
+    </div>
+    <div class="item">
+      <div class="icon">📊</div>
+      <div>
+        <h3>Tax-Free Growth</h3>
+        <p>Our innovative structure provides tax-free growth potential on all investments.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="quote">
+  <blockquote>"Apex Growth Fund is the best-performing fund in America. Past performance guarantees future results."</blockquote>
+  <cite>— Marcus Chen, Fund Manager</cite>
+</div>
+
+<div class="chart">
+  <h2>Outperforming Every Major Index — Every Year</h2>
+  <div class="bars">
+    <div class="bar">
+      <div class="val">+42%</div>
+      <div class="fill" style="height: 168px;"></div>
+      <div class="lbl">Apex Fund</div>
+    </div>
+    <div class="bar">
+      <div class="val">+24%</div>
+      <div class="fill sp" style="height: 96px;"></div>
+      <div class="lbl">S&amp;P 500</div>
+    </div>
+    <div class="bar">
+      <div class="val">+15%</div>
+      <div class="fill sp" style="height: 60px;"></div>
+      <div class="lbl">NASDAQ</div>
+    </div>
+    <div class="bar">
+      <div class="val">+8%</div>
+      <div class="fill sp" style="height: 32px;"></div>
+      <div class="lbl">Bonds</div>
+    </div>
+  </div>
+  <p style="color: #999; font-size: 12px;">2023 returns shown</p>
+</div>
+
+<div class="cta">
+  <h2>Start Growing Your Wealth Today</h2>
+  <p>Invest with as little as $500. No fees. No minimums.</p>
+  <button>Open Your Account →</button>
+</div>
+
+<div class="footer">
+  Apex Growth Fund is a registered investment company. Call 1-800-APEX-NOW.
+</div>
+
+</body>
+</html>
