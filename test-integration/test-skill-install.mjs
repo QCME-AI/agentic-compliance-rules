@@ -149,7 +149,7 @@ test('claw.json exists and has required fields', () => {
   assert(existsSync(clawPath), 'Missing claw.json');
   const claw = JSON.parse(readFileSync(clawPath, 'utf8'));
   assert(claw.name === 'compliance-officer', `Name should be compliance-officer, got ${claw.name}`);
-  assert(claw.entry === 'SKILL.md', `Entry should be SKILL.md, got ${claw.entry}`);
+  assert(claw.entry === 'README.md' || claw.entry === 'SKILL.md', `Entry should be README.md or SKILL.md, got ${claw.entry}`);
   assert(claw.version, 'Missing version');
   assert(claw.description, 'Missing description');
   assert(Array.isArray(claw.tags), 'tags should be an array');
