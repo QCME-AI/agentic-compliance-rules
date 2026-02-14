@@ -1,6 +1,6 @@
 {
   "name": "@qcme/agentic-compliance-rules",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Canonical, versioned, machine-readable compliance rules for AI-powered marketing content validation",
   "type": "module",
   "main": "./dist/index.js",
