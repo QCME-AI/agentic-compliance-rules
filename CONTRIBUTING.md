@@ -36,12 +36,24 @@ Every rule must include `source` metadata:
 
 Rules from restricted sources (FINRA, GIPS, GMC) require legal review before merge.
 
+## Building
+
+After making changes to rules, rebuild all artifacts:
+
+```bash
+npm run build             # Generates dist/index.json, dist/rules.min.json
+npm run build:skill       # Generates skills/compliance-officer/references/*.json
+npm run build:all         # Runs both build steps
+```
+
+The source of truth is the individual rule files in `rules/{framework}/rules/`. The `dist/` and `skills/compliance-officer/references/` directories contain generated artifacts — never edit them directly.
+
 ## Running Checks
 
 ```bash
 npm run validate          # Schema + regex safety
 npm run validate:fixtures # Fixture coverage
 npm run check:licensing   # Source policy checks
-npm run build             # Generate dist artifacts
-npm run ci                # All checks
+npm run build:all         # Generate all artifacts
+npm run ci                # All checks + build
 ```

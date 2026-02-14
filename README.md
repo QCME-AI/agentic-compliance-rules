@@ -129,9 +129,20 @@ import index from '@qcme/agentic-compliance-rules/index.json' with { type: 'json
 ```bash
 git clone https://github.com/QCME-AI/agentic-compliance-rules.git
 cd agentic-compliance-rules
-npm run build
+npm run build:all
 cat dist/index.json | jq '.rules | length'  # 208
 ```
+
+## Development
+
+This repository uses a two-step build process:
+
+1. **Source to Dist**: `npm run build` compiles `rules/*/rules/*.json` into `dist/index.json`
+2. **Dist to Skill**: `npm run build:skill` splits `dist/index.json` into `skills/compliance-officer/references/*.json`
+
+Use `npm run build:all` to run both steps. The `ci` script runs validation and both build steps automatically.
+
+The source of truth is the individual rule files in `rules/{framework}/rules/`. Never edit files in `dist/` or `skills/compliance-officer/references/` directly.
 
 ## Rule Schema
 

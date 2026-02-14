@@ -28,9 +28,15 @@ jobs:
       - run: npm run validate
       - run: npm run validate:fixtures
       - run: npm run check:licensing
-      - run: npm run build
+      - run: npm run build:all
       - name: Verify dist artifacts
         run: |
           test -f dist/index.json || (echo "dist/index.json missing" && exit 1)
           test -f dist/rules.min.json || (echo "dist/rules.min.json missing" && exit 1)
           test -f dist/index.js || (echo "dist/index.js missing" && exit 1)
+      - name: Verify skill references
+        run: |
+          for fw in can-spam ccpa coppa ftc gdpr hipaa sec-482 sec-marketing; do
+            test -f "skills/compliance-officer/references/rules-${fw}.json" || \
+              (echo "skills/compliance-officer/references/rules-${fw}.json missing" && exit 1)
+          done
