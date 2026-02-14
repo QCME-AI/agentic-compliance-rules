@@ -1,0 +1,4 @@
+# Generated skill reference files — duplicates of dist/index.json split by framework.
+# Needed in git for self-contained skill distribution (ClawHub, anthropics/skills).
+# Excluded from npm since programmatic users import from dist/ directly.
+skills/compliance-officer/references/
