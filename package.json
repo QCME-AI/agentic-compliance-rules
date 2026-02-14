@@ -25,6 +25,7 @@
     "build:all": "npm run build && npm run build:skill",
     "check:licensing": "node tools/check-licensing.mjs",
     "migrate": "node tools/migrate-from-backend.mjs",
+    "test:integration": "node test-integration/test-npm-install.mjs && node test-integration/test-skill-install.mjs",
     "ci": "npm run validate && npm run validate:fixtures && npm run check:licensing && npm run build:all",
     "prepublishOnly": "npm run ci"
   },

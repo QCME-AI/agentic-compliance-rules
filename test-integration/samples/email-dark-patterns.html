@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dark Pattern Email</title>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { font-family: -apple-system, sans-serif; background: #f0f0f0; padding: 40px; }
+  .email { max-width: 600px; margin: 0 auto; background: #fff; border-radius: 8px; overflow: hidden; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+  .email-header { background: #f8f9fa; padding: 20px; border-bottom: 1px solid #e0e0e0; font-size: 13px; color: #555; }
+  .email-header .field { margin-bottom: 4px; }
+  .email-header .label { font-weight: 600; color: #333; display: inline-block; width: 60px; }
+  .body { padding: 30px; }
+  .alert { background: #ff3b3b; color: #fff; padding: 15px; text-align: center; font-weight: 700; font-size: 18px; margin-bottom: 20px; border-radius: 4px; }
+  .body h1 { font-size: 24px; margin-bottom: 15px; }
+  .body p { font-size: 15px; line-height: 1.6; margin-bottom: 15px; color: #333; }
+  .testimonials { background: #f8f9fa; padding: 20px; border-radius: 8px; margin: 20px 0; }
+  .testimonials .item { margin-bottom: 15px; padding-bottom: 15px; border-bottom: 1px solid #e0e0e0; }
+  .testimonials .item:last-child { border: none; margin: 0; padding: 0; }
+  .testimonials .stars { color: #ff8c00; }
+  .testimonials .text { font-style: italic; margin: 5px 0; }
+  .testimonials .author { font-size: 12px; color: #888; }
+  .urgency { text-align: center; padding: 20px; margin: 20px 0; }
+  .urgency .timer { font-size: 36px; font-family: monospace; color: #ff3b3b; font-weight: 700; }
+  .urgency .spots { font-size: 14px; color: #ff3b3b; margin-top: 5px; }
+  .cta-section { text-align: center; margin: 25px 0; }
+  .cta-btn { display: inline-block; background: #00cc66; color: #fff; padding: 16px 40px; border-radius: 30px; font-size: 18px; font-weight: 700; text-decoration: none; text-transform: uppercase; }
+  .no-btn { display: block; text-align: center; margin-top: 10px; font-size: 12px; color: #999; text-decoration: underline; }
+  .preselect { background: #f8f9fa; padding: 20px; margin: 20px 0; border-radius: 8px; border: 1px solid #e0e0e0; }
+  .preselect label { display: flex; align-items: flex-start; gap: 10px; font-size: 13px; color: #555; margin-bottom: 8px; }
+  .preselect input[type="checkbox"] { margin-top: 2px; }
+  .footer { background: #f8f9fa; padding: 20px; font-size: 11px; color: #999; text-align: center; border-top: 1px solid #e0e0e0; }
+</style>
+</head>
+<body>
+
+<div class="email">
+  <div class="email-header">
+    <div class="field"><span class="label">From:</span> deals@totally-not-spam.com</div>
+    <div class="field"><span class="label">Reply-To:</span> no-reply@different-domain.com</div>
+    <div class="field"><span class="label">Subject:</span> 🚨 URGENT: Your account will be DELETED unless you act NOW!!!</div>
+  </div>
+
+  <div class="body">
+    <div class="alert">⚠️ ACCOUNT DELETION WARNING ⚠️</div>
+
+    <h1>CONGRATULATIONS! You've Been Specially Selected!</h1>
+
+    <p>You're one of only 50 people chosen for this EXCLUSIVE, never-before-seen offer. Our brand new <strong>CryptoWealth AI Trading Bot</strong> guarantees 500% returns on your investment within 90 days.</p>
+
+    <p>This is NOT a scam — real people are making THOUSANDS every single day!</p>
+
+    <div class="testimonials">
+      <div class="item">
+        <div class="stars">★★★★★</div>
+        <p class="text">"I made $50,000 in my first week!"</p>
+        <p class="author">— John D.</p>
+      </div>
+      <div class="item">
+        <div class="stars">★★★★★</div>
+        <p class="text">"Quit my job thanks to CryptoWealth!"</p>
+        <p class="author">— Mike R.</p>
+      </div>
+      <div class="item">
+        <div class="stars">★★★★★</div>
+        <p class="text">"Best investment I ever made"</p>
+        <p class="author">— Anonymous Verified Buyer</p>
+      </div>
+    </div>
+
+    <div class="urgency">
+      <p style="font-weight: 700; margin-bottom: 5px;">🔥 This offer EXPIRES in:</p>
+      <div class="timer">23:59:47</div>
+      <p class="spots">Only 7 spots remaining — WILL NEVER be available again!</p>
+    </div>
+
+    <div class="cta-section">
+      <a href="#" class="cta-btn">CLAIM YOUR GUARANTEED PROFITS →</a>
+      <a href="#" class="no-btn">No thanks, I don't want to make money</a>
+    </div>
+
+    <div class="preselect">
+      <p style="font-weight: 600; margin-bottom: 10px;">Your preferences:</p>
+      <label><input type="checkbox" checked disabled> Yes, send me daily trading alerts ($29.99/mo)</label>
+      <label><input type="checkbox" checked disabled> Yes, share my data with trusted investment partners</label>
+      <label><input type="checkbox" checked disabled> Yes, subscribe to CryptoWealth Premium newsletter</label>
+    </div>
+
+    <p style="font-size: 13px; color: #888;">P.S. If you don't act now, you'll miss the opportunity of a lifetime. Don't be the person who looks back with regret!</p>
+  </div>
+
+  <div class="footer">
+    This email was sent by CryptoWealth LLC<br>
+    To stop receiving emails, reply with "STOP" in the subject line and allow 6-8 weeks for processing.
+  </div>
+</div>
+
+</body>
+</html>

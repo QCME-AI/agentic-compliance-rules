@@ -8,6 +8,7 @@ on:
       - "schemas/**"
       - "tools/**"
       - "skills/**"
+      - "test-integration/**"
       - "package.json"
   pull_request:
     paths:
@@ -15,6 +16,7 @@ on:
       - "schemas/**"
       - "tools/**"
       - "skills/**"
+      - "test-integration/**"
       - "package.json"
 
 jobs:
@@ -40,3 +42,39 @@ jobs:
             test -f "skills/compliance-officer/references/rules-${fw}.json" || \
               (echo "skills/compliance-officer/references/rules-${fw}.json missing" && exit 1)
           done
+
+  integration:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Build package
+        run: npm run build:all
+      - name: Create tarball
+        run: npm pack
+      - name: Run npm install integration tests
+        run: node test-integration/test-npm-install.mjs
+      - name: Run skill install integration tests
+        run: node test-integration/test-skill-install.mjs
+
+  screenshots:
+    runs-on: ubuntu-latest
+    needs: validate
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Install Playwright
+        run: npm install playwright && npx playwright install chromium --with-deps
+      - name: Generate screenshots from HTML samples
+        run: node test-integration/generate-screenshots.mjs
+      - name: Upload screenshots as artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: sample-screenshots
+          path: test-integration/samples/screenshots/
+          retention-days: 14
