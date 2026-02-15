@@ -13,7 +13,9 @@ import { join } from 'node:path';
 import { tmpdir } from 'node:os';
 
 const projectRoot = new URL('..', import.meta.url).pathname.replace(/\/$/, '');
-const tarball = join(projectRoot, 'qcme-agentic-compliance-rules-1.0.2.tgz');
+const pkgJson = JSON.parse(readFileSync(join(projectRoot, 'package.json'), 'utf8'));
+const pkgVersion = pkgJson.version;
+const tarball = join(projectRoot, `qcme-agentic-compliance-rules-${pkgVersion}.tgz`);
 
 let tempDir;
 let passed = 0;
@@ -82,7 +84,7 @@ test('named exports: allRules, version, packs', () => {
   writeFileSync(join(tempDir, 'test2.mjs'), script);
   const result = JSON.parse(execSync(`node "${join(tempDir, 'test2.mjs')}"`, { encoding: 'utf8' }));
   assert(result.rulesCount === 208, `Expected 208 allRules, got ${result.rulesCount}`);
-  assert(result.version === '1.0.2', `Expected version 1.0.2, got ${result.version}`);
+  assert(result.version === pkgVersion, `Expected version ${pkgVersion}, got ${result.version}`);
   assert(result.packsCount === 8, `Expected 8 packs, got ${result.packsCount}`);
   const expected = ['can-spam', 'ccpa', 'coppa', 'ftc', 'gdpr', 'hipaa', 'sec-482', 'sec-marketing'];
   assert(JSON.stringify(result.packIds) === JSON.stringify(expected), `Packs mismatch: ${result.packIds}`);
