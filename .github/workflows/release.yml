@@ -7,7 +7,6 @@ on:
 jobs:
   release:
     runs-on: ubuntu-latest
-    if: "!contains(github.event.head_commit.message, 'chore: bump version')"
     permissions:
       contents: write
       packages: write
@@ -23,29 +22,23 @@ jobs:
       - name: Build and validate
         run: npm run ci
 
-      - name: Bump patch version
+      - name: Get version
         id: version
         run: |
-          git config user.name "github-actions[bot]"
-          git config user.email "github-actions[bot]@users.noreply.github.com"
-          npm version patch --no-git-tag-version
           VERSION=$(node -p "require('./package.json').version")
-          echo "new=$VERSION" >> "$GITHUB_OUTPUT"
-          git add package.json
-          git commit -m "chore: bump version to $VERSION [skip ci]"
-          git push
+          echo "current=$VERSION" >> "$GITHUB_OUTPUT"
 
       - name: Create git tag
         continue-on-error: true
         run: |
-          git tag "rules-v${{ steps.version.outputs.new }}"
-          git push origin "rules-v${{ steps.version.outputs.new }}"
+          git tag "rules-v${{ steps.version.outputs.current }}"
+          git push origin "rules-v${{ steps.version.outputs.current }}"
 
       - name: GitHub Release
         continue-on-error: true
         uses: softprops/action-gh-release@v2
         with:
-          tag_name: "rules-v${{ steps.version.outputs.new }}"
+          tag_name: "rules-v${{ steps.version.outputs.current }}"
           files: |
             dist/index.json
             dist/rules.min.json
@@ -63,6 +56,7 @@ jobs:
           registry-url: https://npm.pkg.github.com
 
       - name: Publish to GitHub Packages
+        continue-on-error: true
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
