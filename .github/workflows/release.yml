@@ -3,6 +3,16 @@ name: Release
 on:
   push:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      bump:
+        description: "Version bump type"
+        required: true
+        type: choice
+        options:
+          - patch
+          - minor
+          - major
 
 jobs:
   release:
@@ -60,3 +70,41 @@ jobs:
         run: npm publish --access public
         env:
           NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+  # Trigger manually from Actions UI: pick patch/minor/major, creates a PR with the bump
+  bump-version:
+    if: github.event_name == 'workflow_dispatch'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Bump version
+        id: bump
+        run: |
+          npm version ${{ github.event.inputs.bump }} --no-git-tag-version
+          VERSION=$(node -p "require('./package.json').version")
+          echo "new=$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Create PR
+        run: |
+          BRANCH="release/v${{ steps.bump.outputs.new }}"
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git checkout -b "$BRANCH"
+          git add package.json
+          git commit -m "chore: bump version to ${{ steps.bump.outputs.new }}"
+          git push origin "$BRANCH"
+          gh pr create \
+            --title "chore: release v${{ steps.bump.outputs.new }}" \
+            --body "Bumps version to \`${{ steps.bump.outputs.new }}\` (${{ github.event.inputs.bump }}). Merge to publish." \
+            --base main \
+            --head "$BRANCH"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
