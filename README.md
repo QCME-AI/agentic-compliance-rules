@@ -44,6 +44,14 @@ LLMs already know a lot about regulations — so why package rules as structured
 
 ## Quick Start
 
+### ClawHub
+
+Install via [ClawHub](https://clawhub.ai/arberx/compliance-officer):
+
+```
+npx clawhub install compliance-officer
+```
+
 ### Claude Code Skills
 
 The fastest way to use these rules. Requires [Claude Code](https://claude.ai/code).
