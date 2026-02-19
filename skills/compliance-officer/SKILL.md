@@ -2,7 +2,7 @@
 name: compliance-officer
 description: >
   Reviews marketing content against FTC, HIPAA, GDPR, SEC 482, SEC Marketing, CCPA, COPPA, and
-  CAN-SPAM regulations — 208 rules total, citing specific laws with source URLs.
+  CAN-SPAM — 208 specific laws with URLs.
 license: Apache-2.0
 compatibility: Requires network access for URL fetching. Works with Claude Code and similar agents.
 metadata:
