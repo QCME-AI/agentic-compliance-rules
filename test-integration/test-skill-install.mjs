@@ -96,7 +96,9 @@ for (const skill of expectedSkills) {
 // Test: compliance-officer has reference files
 console.log('\n--- compliance-officer references ---');
 const expectedRefs = [
-  'rules-ftc.json',
+  'rules-ftc-claims.json',
+  'rules-ftc-endorsements.json',
+  'rules-ftc-dark-patterns.json',
   'rules-hipaa.json',
   'rules-gdpr.json',
   'rules-sec-482.json',
@@ -134,12 +136,27 @@ for (const rule of indexJson.rules) {
   frameworkCounts[rule.framework] = (frameworkCounts[rule.framework] || 0) + 1;
 }
 
+// FTC is split into 3 files; count all FTC split files together
+const ftcSplitFiles = ['rules-ftc-claims.json', 'rules-ftc-endorsements.json', 'rules-ftc-dark-patterns.json'];
+
 for (const [fw, count] of Object.entries(frameworkCounts)) {
-  test(`${fw} reference matches dist (${count} rules)`, () => {
-    const refPath = join(refsDir, `rules-${fw}.json`);
-    const refData = JSON.parse(readFileSync(refPath, 'utf8'));
-    assert(refData.length === count, `Expected ${count} rules in rules-${fw}.json, got ${refData.length}`);
-  });
+  if (fw === 'ftc') {
+    test(`ftc references match dist (${count} rules across 3 files)`, () => {
+      let total = 0;
+      for (const f of ftcSplitFiles) {
+        const refPath = join(refsDir, f);
+        const refData = JSON.parse(readFileSync(refPath, 'utf8'));
+        total += refData.length;
+      }
+      assert(total === count, `Expected ${count} FTC rules across split files, got ${total}`);
+    });
+  } else {
+    test(`${fw} reference matches dist (${count} rules)`, () => {
+      const refPath = join(refsDir, `rules-${fw}.json`);
+      const refData = JSON.parse(readFileSync(refPath, 'utf8'));
+      assert(refData.length === count, `Expected ${count} rules in rules-${fw}.json, got ${refData.length}`);
+    });
+  }
 }
 
 // Test: OpenClaw claw.json

@@ -32,12 +32,32 @@ function main() {
     byFramework[fw].push(rule);
   }
 
+  // FTC rules are split into 3 files to stay under Claude Code's token limit
+  const FTC_SPLITS = {
+    "ftc-claims": /^FTC-(233|238|251|260|CLAIM|FREE|GREEN|USA|bait|hidden|truth)/,
+    "ftc-endorsements": /^FTC-(255|REVIEW|NATIVE)/,
+    "ftc-dark-patterns": /^FTC-(DARK|SCARCITY|CANCEL|NEGATIVE|RECURRING)/,
+  };
+
   let total = 0;
   for (const [fw, rules] of Object.entries(byFramework).sort()) {
-    const outPath = join(refsDir, `rules-${fw}.json`);
-    writeFileSync(outPath, JSON.stringify(rules, null, 2) + "\n");
-    console.log(`${fw}: ${rules.length} rules → references/rules-${fw}.json`);
-    total += rules.length;
+    if (fw === "ftc") {
+      // Split FTC into smaller files
+      for (const [splitName, pattern] of Object.entries(FTC_SPLITS)) {
+        const splitRules = rules.filter((r) => pattern.test(r.id));
+        const outPath = join(refsDir, `rules-${splitName}.json`);
+        writeFileSync(outPath, JSON.stringify(splitRules, null, 2) + "\n");
+        console.log(
+          `${splitName}: ${splitRules.length} rules → references/rules-${splitName}.json`
+        );
+        total += splitRules.length;
+      }
+    } else {
+      const outPath = join(refsDir, `rules-${fw}.json`);
+      writeFileSync(outPath, JSON.stringify(rules, null, 2) + "\n");
+      console.log(`${fw}: ${rules.length} rules → references/rules-${fw}.json`);
+      total += rules.length;
+    }
   }
 
   console.log(`\nTotal: ${total} rules across ${Object.keys(byFramework).length} frameworks`);
