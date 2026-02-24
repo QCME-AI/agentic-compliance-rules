@@ -38,7 +38,7 @@ jobs:
           test -f dist/index.js || (echo "dist/index.js missing" && exit 1)
       - name: Verify skill references
         run: |
-          for fw in can-spam ccpa coppa ftc gdpr hipaa sec-482 sec-marketing; do
+          for fw in can-spam ccpa coppa ftc-claims ftc-endorsements ftc-dark-patterns gdpr hipaa sec-482 sec-marketing; do
             test -f "skills/compliance-officer/references/rules-${fw}.json" || \
               (echo "skills/compliance-officer/references/rules-${fw}.json missing" && exit 1)
           done
